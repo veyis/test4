@@ -64,15 +64,15 @@ const Navbar = () => {
           <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
             {/* <!-- Logo --> */}
             <Link className='flex flex-shrink-0 items-center' href='/'>
-              <Image className='h-10 w-auto' src={logo} alt='PropertyPulse' />
+              <Image className='h-10 w-auto' src={logo} alt='Xperiencetheb' />
 
               <span className='hidden md:block text-white text-2xl font-bold ml-2'>
               Xperiencetheb
               </span>
             </Link>
             {/* <!-- Desktop Menu Hidden below md screens --> */}
-            <div className='hidden md:ml-6 md:block'>
-              <div className='flex space-x-2'>
+            <div className='hidden md:ml-6 md:block '>
+              <div className='flex space-x-2 '>
                 <Link
                   href='/'
                   className={`${
@@ -82,14 +82,33 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link
-                  href='/properties'
+                  href='/about'
                   className={`${
-                    pathname === '/properties' ? 'bg-black' : ''
+                    pathname === '/about' ? 'bg-black' : ''
                   } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
                 >
-                  Properties
+                  About
                 </Link>
-                {session && (
+                <Link
+                  href='/Contact'
+                  className={`${
+                    pathname === '/contact' ? 'bg-black' : ''
+                  } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
+                >
+                  Contact
+                </Link>
+                
+                <Link
+                  href='/faq'
+                  className={`${
+                    pathname === '/faq' ? 'bg-black' : ''
+                  } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
+                >
+                  FAQ
+                </Link>
+
+
+                {/* {session && (
                   <Link
                     href='/properties/add'
                     className={`${
@@ -98,7 +117,7 @@ const Navbar = () => {
                   >
                     Add Property
                   </Link>
-                )}
+                )} */}
               </div>
             </div>
           </div>
@@ -239,14 +258,34 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              href='/properties'
+              href='/about'
               className={`${
-                pathname === '/properties' ? 'bg-black' : ''
+                pathname === '/about' ? 'bg-black' : ''
               } text-white block rounded-md px-3 py-2 text-base font-medium`}
             >
-              Properties
+              About
             </Link>
-            {session && (
+
+            <Link
+              href='/contact'
+              className={`${
+                pathname === '/about' ? 'bg-black' : ''
+              } text-white block rounded-md px-3 py-2 text-base font-medium`}
+            >
+              Contact
+            </Link>
+
+            <Link
+              href='/faq'
+              className={`${
+                pathname === '/faq' ? 'bg-black' : ''
+              } text-white block rounded-md px-3 py-2 text-base font-medium`}
+            >
+              Faq
+            </Link>
+
+
+            {/* {session && (
               <Link
                 href='/properties/add'
                 className={`${
@@ -255,7 +294,7 @@ const Navbar = () => {
               >
                 Add Property
               </Link>
-            )}
+            )} */}
 
             {!session &&
               providers &&

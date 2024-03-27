@@ -18,7 +18,7 @@ const Hero = () => {
           Book Your Stay
         </button>
         <br /> 
-      
+        
         <p>Stay at our 'Tesla House' and discover San Antonio's attractions at your fingertips. </p>
       </div>
     </section>
