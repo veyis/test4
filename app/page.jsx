@@ -16,7 +16,7 @@ const HomePage = () => {
 
 {/*  <InfoBoxes /> */}
       {/* <FeaturedProperties /> */}
-      <HomeProperties />
+      {/* <HomeProperties /> */}
     </>
   );
 };
