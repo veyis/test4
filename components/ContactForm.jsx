@@ -38,7 +38,7 @@ export default function ContactForm() {
     const minDepartureDate = formData.arrivalDate ? formData.arrivalDate : today;
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 text-2xl">
             <form onSubmit={handleSubmit} className="space-y-6 bg-white shadow-lg rounded-md p-8">
                 <div className="flex flex-wrap -mx-2">
                     <div className="px-2 w-full sm:w-1/2">

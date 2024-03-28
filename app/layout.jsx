@@ -8,9 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'photoswipe/dist/photoswipe.css';
 
 export const metadata = {
-  title: 'PropertyPulse | Find The Perfect Rental',
-  description: 'Find your dream rental property',
-  keywords: 'rental, find rentals, find properties',
+  title: 'Stay at Tesla House | Unique Accommodations & Local Favorites - ExperienceTheB.com',
+  description: 'Discover the Tesla House on ExperienceTheB.com. A place where comfort meets innovation. Get in touch for bookings, local recommendations, and a unique stay experience. Your adventure starts here!',
+  keywords: 'rental, find rentals, find properties, Tesla House, Unique Stays, Accommodations, Local Favorites, Book Your Stay, ExperienceTheB, Innovative Living, Contact Us',
 };
 
 const MainLayout = ({ children }) => {
