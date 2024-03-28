@@ -90,7 +90,7 @@ const Navbar = () => {
                   About
                 </Link>
                 <Link
-                  href='/Contact'
+                  href='/contact'
                   className={`${
                     pathname === '/contact' ? 'bg-black' : ''
                   } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
