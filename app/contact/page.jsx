@@ -3,10 +3,14 @@ import ContactForm from '@/components/ContactForm'; // Adjust the import path ba
 
 const ContactPage = () => {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <section className='bg-blue-50'>
+      <div className='container m-auto max-w-2xl py-24'>
+
       <h1 className="text-3xl font-semibold text-center mb-8">Contact Us</h1>
       <ContactForm />
     </div>
+    </section>
+  
   );
 };
 
