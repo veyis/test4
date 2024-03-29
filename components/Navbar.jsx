@@ -82,6 +82,14 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link
+                  href='/properties'
+                  className={`${
+                    pathname === '/properties' ? 'bg-black' : ''
+                  } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
+                >
+                  Properties
+                </Link>
+                <Link
                   href='/about'
                   className={`${
                     pathname === '/about' ? 'bg-black' : ''
@@ -257,6 +265,15 @@ const Navbar = () => {
             >
               Home
             </Link>
+
+            <Link
+              href='/properties'
+              className={`${
+                pathname === '/properties' ? 'bg-black' : ''
+              } text-white block rounded-md px-3 py-2 text-base font-medium`}
+            >
+              Properties
+            </Link>
             <Link
               href='/about'
               className={`${
@@ -269,7 +286,7 @@ const Navbar = () => {
             <Link
               href='/contact'
               className={`${
-                pathname === '/about' ? 'bg-black' : ''
+                pathname === '/contact' ? 'bg-black' : ''
               } text-white block rounded-md px-3 py-2 text-base font-medium`}
             >
               Contact
