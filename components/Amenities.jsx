@@ -1,6 +1,6 @@
 // components/Amenities.js
 
-const Amenities = () => {
+const Amenities = ( amenities) => {
     return (
       <div className="max-w-4xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-semibold text-center mb-6">Property Amenities</h1>

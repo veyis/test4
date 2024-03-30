@@ -94,7 +94,6 @@ const PropertyCard = ({ property }) => {
               {property.location.city} {property.location.state}{' '}
             </span>
           </div>
-          console.log("property id":,property.id)
           <Link
           console
             href={`/properties/${property.id}`}
