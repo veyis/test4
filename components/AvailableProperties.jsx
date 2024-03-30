@@ -1,10 +1,10 @@
-import { fetchProperties } from '@/utils/requests';
+
+import properties from '@/constants/properties'; // Ensure this path is correct
 import FeaturedPropertyCard from './FeaturedPropertyCard';
 
-const AvailableProperties = async () => {
-  const properties = await fetchProperties({
-    showFeatured: true,
-  });
+const AvailableProperties = () => {
+
+  console.log("properties",properties)
 
   return (
     properties.length > 0 && (
@@ -15,12 +15,16 @@ const AvailableProperties = async () => {
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {properties.map((property) => (
-              <FeaturedPropertyCard key={property._id} property={property} />
+              // Ensure the property identifier is correctly referenced, adjusted if needed
+              <FeaturedPropertyCard key={property.id} property={property} />
+            
             ))}
+        
           </div>
         </div>
       </section>
     )
   );
 };
+
 export default AvailableProperties;

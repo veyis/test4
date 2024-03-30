@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['lh3.googleusercontent.com', 'res.cloudinary.com'], // Specify domains
     remotePatterns: [
       {
         protocol: 'https',
@@ -18,10 +17,16 @@ const nextConfig = {
         hostname: 'www.xperiencetheb.com',
         pathname: '**',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        pathname: '**',
+      },
     ],
   },
-  // Add other Next.js config options here as needed
 };
 
-export default nextConfig;
+
+
+export default nextConfig; // Use `module.exports` for Next.js config file
 

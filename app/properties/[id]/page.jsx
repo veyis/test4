@@ -11,6 +11,7 @@ import PropertyContactForm from '@/components/PropertyContactForm';
 import ShareButtons from '@/components/ShareButtons';
 import Spinner from '@/components/Spinner';
 import { FaArrowLeft } from 'react-icons/fa';
+import propertiesData from '@/constants/properties';
 
 const PropertyPage = () => {
   const { id } = useParams();
@@ -19,22 +20,26 @@ const PropertyPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchPropertyData = async () => {
-      if (!id) return;
-      try {
-        const property = await fetchProperty(id);
-        setProperty(property);
-      } catch (error) {
-        console.error('Error fetching property:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
+    if (!id) return;
 
-    if (property === null) {
-      fetchPropertyData();
+    // Find the property by id in the imported properties data
+    const fetchedProperty = propertiesData.find(p => p.id === id); // Ensure your property objects have an 'id' field
+
+    if (fetchedProperty) {
+      setProperty(fetchedProperty);
+    } else {
+      console.error('Property not found');
     }
-  }, [id, property]);
+
+    setLoading(false);
+  }, [id]);
+
+  
+
+
+
+
+
 
   if (!property && !loading) {
     return (
