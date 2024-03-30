@@ -21,7 +21,7 @@ const FeaturedPropertyCard = ({ property }) => {
     }
   };
 
-  console.log(property);
+
 
   return (
     <div className='bg-white rounded-xl shadow-md relative flex flex-col md:flex-row'>

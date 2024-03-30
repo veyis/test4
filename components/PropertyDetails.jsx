@@ -7,6 +7,7 @@ import {
   FaMapMarker,
 } from 'react-icons/fa';
 import PropertyMap from '@/components/PropertyMap';
+import Amenities from '@/components/Amenities';
 
 const PropertyDetails = ({ property }) => {
   return (
@@ -77,11 +78,14 @@ const PropertyDetails = ({ property }) => {
             <span className='hidden sm:inline'>sqft</span>
           </p>
         </div>
-        <p className='text-gray-500 mb-4 text-center'>{property.description}</p>
+        <p className='text-gray-500 mb-4  text-left'>{property.description}</p>
       </div>
 
       <div className='bg-white p-6 rounded-lg shadow-md mt-6'>
         <h3 className='text-lg font-bold mb-6'>Amenities</h3>
+
+        <Amenities />
+        
 
         <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none space-y-2'>
           {property.amenities.map((amenity, index) => (
