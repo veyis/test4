@@ -8,10 +8,11 @@ const properties = [
       type: "House",
       description: "Tesla House is a single story 3-bed 3-bath craftsman bungalow exuding warmth and grandeur with its 11’ high ceilings, natural wood finishes, and inviting open floor plan. Situated just east of downtown San Antonio in the charming Dignowity Hill historic district,known for its rich architectural heritage and vibrant community spirit.",
       location: {
-        street: "123 Main St",
+        street: "123 Main St  ",
         city: "San Antonio",
         state: "Texas",
-        zipcode: "12345",
+        zipcode: "78202",
+    
       },
 
       beds: 3,
@@ -103,7 +104,7 @@ const properties = [
         type: "House",
         description: "A cozy cottage with a beautiful garden.",
         location: {
-          street: "123 Main St",
+          street: "6289 CAMINITO DEL OESTE",
           city: "San Diego",
           state: "CA",
           zipcode: "92111",

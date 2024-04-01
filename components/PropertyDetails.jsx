@@ -69,7 +69,7 @@ const PropertyDetails = ({ property }) => {
                   <p>
             <FaUsers className='inline-block mr-2' /> {property.maxGuests}{' '}
             <span className='hidden sm:inline'>Max</span>
-            
+
                   </p>
           <p>
             <FaBed className='inline-block mr-2' /> {property.beds}{' '}
@@ -104,7 +104,7 @@ const PropertyDetails = ({ property }) => {
 
       </div>
       <div className='bg-white p-6 rounded-lg shadow-md mt-6'>
-        <PropertyMap property={property} />
+        <PropertyMap property={property.location} />
       </div>
     </main>
   );
