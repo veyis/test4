@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {
+  FaUsers,
   FaBed,
   FaBath,
   FaRulerCombined,
@@ -49,6 +50,10 @@ const PropertyCard = ({ property }) => {
         </h3>
 
         <div className='flex justify-center gap-4 text-gray-500 mb-4'>
+        <p>
+            <FaUsers className='inline mr-2' /> {property.maxGuests}{' '}
+            <span className='md:hidden lg:inline'>Max</span>
+          </p>
           <p>
             <FaBed className='inline mr-2' /> {property.beds}{' '}
             <span className='md:hidden lg:inline'>Beds</span>

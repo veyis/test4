@@ -13,8 +13,10 @@ const properties = [
         state: "Texas",
         zipcode: "12345",
       },
+
       beds: 3,
       baths: 3,
+      maxGuests: 6,
       square_feet: 1500,
       amenities: ["Fridge & Freezer with LCD entertainment screen and filtered water dispenser",
       "Gas Stove and Oven with Fume Hood",
@@ -106,8 +108,9 @@ const properties = [
           state: "CA",
           zipcode: "92111",
         },
-        beds: 3,
+        beds: 2,
         baths: 2,
+        maxGuests: 2,
         square_feet: 1600,
         amenities: ["Garden", "Garage"],
         rates: {

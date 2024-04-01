@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PropertySearchForm from './PropertySearchForm';
 
 const Hero = () => {
@@ -14,9 +15,13 @@ const Hero = () => {
         
         </div>
         {/* <PropertySearchForm /> */}
+        <Link className='bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded mt-4' href='/contact'>
+            Book Your Stay
+          </Link>
+{/* 
         <button className='bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded mt-4'>
           Book Your Stay
-        </button>
+        </button> */}
         <br /> 
         
         <p>Stay at our 'Tesla House' and discover San Antonio's attractions at your fingertips. </p>

@@ -1,4 +1,5 @@
 import {
+  FaUsers,
   FaBed,
   FaBath,
   FaRulerCombined,
@@ -63,6 +64,13 @@ const PropertyDetails = ({ property }) => {
       <div className='bg-white p-6 rounded-lg shadow-md mt-6'>
         <h3 className='text-lg font-bold mb-6'>Description & Details</h3>
         <div className='flex justify-center gap-4 text-blue-500 mb-4 text-xl space-x-9'>
+              
+
+                  <p>
+            <FaUsers className='inline-block mr-2' /> {property.maxGuests}{' '}
+            <span className='hidden sm:inline'>Max</span>
+            
+                  </p>
           <p>
             <FaBed className='inline-block mr-2' /> {property.beds}{' '}
             <span className='hidden sm:inline'>Beds</span>
