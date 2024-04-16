@@ -104,7 +104,7 @@ const properties = [
         type: "House",
         description: "A cozy cottage with a beautiful garden.",
         location: {
-          street: "6289 CAMINITO DEL OESTE",
+          street: "1234 Main St",
           city: "San Diego",
           state: "CA",
           zipcode: "92111",

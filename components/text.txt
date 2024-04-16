@@ -1,0 +1,10 @@
+        fullname
+        email
+        phone
+        arrivalDate
+        departureDate
+        adults
+        children
+        pets
+        discountCode
+        comments
