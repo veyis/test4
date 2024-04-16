@@ -8,11 +8,14 @@ export type FormData = {
   name: string;
   phone: string;
   email: string;
+  adults: number;
+  children: number;
   serviceType: string;
   message: string;
   petTypes: string[];
   arrivalDate: string;  // Added field for arrival date
   departureDate: string;  // Added field for departure date
+
 };
 
 const Contact: FC = () => {
@@ -144,6 +147,53 @@ const Contact: FC = () => {
                 <p className="text-red-500">Departure date is required</p>
               )}
             </div>
+
+
+            <div className="mb-5">
+              <label
+                htmlFor="Adults"
+                className="mb-3 block text-base font-medium text-black"
+              >
+                Adults
+              </label>
+              <input
+                type="number"
+                className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
+                {...register("adults", { required: true })}
+              />
+              {errors.adults && (
+                <p className="text-red-500">Adult Number is required</p>
+              )}
+            </div>
+
+            <div className="mb-5">
+    <label
+      htmlFor="children"
+      className="mb-3 block text-base font-medium text-black"
+    >
+      Children
+    </label>
+    <input
+      type="number"
+      className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
+      id="children" // Ensure the id matches the htmlFor in the label
+      {...register("children", { 
+        required: "Children Number is required",
+        min: {
+          value: 1,
+          message: "Number of children cannot be less than 1" // Custom message for min value
+        },
+        max: {
+          value: 12,
+          message: "Number of children cannot be more than 12" // Custom message for max value
+        }
+      })}
+    />
+    {errors.children && (
+      <p className="text-red-500">{errors.children.message}</p>
+    )}
+</div>
+
 
             <div className="mb-5">
               <span className="mb-3 block text-base font-medium text-black">
