@@ -7,11 +7,14 @@ const MainPageMap = () => {
 				<Image
 					src="/map.jpg"
 					alt="Descriptive Image Alt Text"
-					layout="fill"
+                    width={400}
+                    height={400}
+                
+				
 					objectFit="contain" // Ensures the image scales down to fit within the bounds of the container without distortion or cropping
 				/>
 			</div>
-			<div className="md:col-span-2 flex justify-center items-center text-lg font-medium h-96 text-gray-800 p-6 bg-slate-50">
+			<div className="md:col-span-2 flex justify-center items-center text-lg font-medium  text-gray-800 p-6 bg-slate-50">
 				<p>
                     
            
