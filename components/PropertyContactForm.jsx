@@ -2,10 +2,10 @@
 import { useState } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import { useSession } from 'next-auth/react';
+
 
 const PropertyContactForm = ({ property }) => {
-  const { data: session } = useSession();
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -24,6 +24,7 @@ const PropertyContactForm = ({ property }) => {
       property: property._id,
     };
 
+    
     try {
       const res = await fetch('/api/messages', {
         method: 'POST',
