@@ -108,12 +108,7 @@ const PropertyCard = ({ property }) => {
           </Link>
         </div>
         <div>
-          <p>
-          Whether you find yourself in San Antonio for business, leisure, a special event, or in need of temporary housing during relocation, our accommodations are designed to provide the ideal fusion of convenience and relaxation.
-Live in complete comfort within a fully furnished home, boasting contemporary luxuries, just a short drive or stroll away from shopping, dining, and the vibrant downtown scene.
-With San Antonio's myriad attractions at your fingertips, we extend our invitation for you to stay in ”Tesla House” and fully
-Xperience theBeauty of this remarkable city.
-          </p>
+     
         
         </div>
       </div>

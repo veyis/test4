@@ -3,6 +3,7 @@ import InfoBoxes from '@/components/InfoBoxes';
 import HomeProperties from '@/components/HomeProperties';
 import FeaturedProperties from '@/components/FeaturedProperties';
 import AvailableProperties from '@/components/AvailableProperties';
+import MainPageMap from '@/components/MainPageMap';
 
 const HomePage = () => {
   return (
@@ -13,7 +14,8 @@ const HomePage = () => {
 </div>
 
  <AvailableProperties />
- <InfoBoxes /> 
+ <MainPageMap />
+
  
     </>
   );
