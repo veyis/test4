@@ -97,50 +97,7 @@ const properties = [
       createdAt: new Date().toISOString(), // Simulate timestamps
       updatedAt: new Date().toISOString(),
     },
-    {
-        id: "2", // Added to simulate ObjectId
-        owner: "userId1", // Simulate ObjectId reference
-        name: "San Diego House",
-        type: "House",
-        description: "A cozy cottage with a beautiful garden.",
-        location: {
-          street: "1234 Main St",
-          city: "San Diego",
-          state: "CA",
-          zipcode: "92111",
-        },
-        beds: 2,
-        baths: 2,
-        maxGuests: 2,
-        square_feet: 1600,
-        amenities: ["Garden", "Garage"],
-        rates: {
-          nightly: "",
-          weekly: 500,
-          monthly: 2000,
-        },
-        seller_info: {
-          name: "John Doe",
-          email: "john.doe@example.com",
-          phone: "123-456-7890",
-        },
-        images: [
-          "san1.jpg",
-          "san2.jpg",
-          "san3.jpg",
-          "san4.jpg",
-          "san5.jpg",
-          "san6.jpg",
-          "san7.jpg",
-          "san8.jpg",
-          "san9.jpg",
-          "san10.jpg",
-          
-        ],
-        is_featured: false,
-        createdAt: new Date().toISOString(), // Simulate timestamps
-        updatedAt: new Date().toISOString(),
-      },
+  
     // Add more property objects as needed
     
   ];

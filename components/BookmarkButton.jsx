@@ -1,21 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { useSession } from 'next-auth/react';
+
 import { toast } from 'react-toastify';
 import { FaBookmark } from 'react-icons/fa';
 
 const BookmarkButton = ({ property }) => {
-  const { data: session } = ion();
-  const userId = session?.user?.id;
+
 
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (!userId) {
-      setLoading(false);
-      return;
-    }
 
     const checkBookmarkStatus = async () => {
       try {
@@ -40,8 +34,6 @@ const BookmarkButton = ({ property }) => {
       }
     };
 
-    checkBookmarkStatus();
-  }, [property._id, userId]);
 
   const handleClick = async () => {
     if (!userId) {

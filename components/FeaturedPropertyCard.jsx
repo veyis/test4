@@ -103,6 +103,7 @@ const FeaturedPropertyCard = ({ property }) => {
             Details
           </Link>
         </div>
+      
       </div>
     </div>
   );

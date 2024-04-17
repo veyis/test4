@@ -9,7 +9,7 @@ const HomePage = () => {
     <>
 <div className="bg-cover bg-center flex justify-center items-center text-white text-center p-5 bg-no-repeat h-1/2 w-full" style={{ backgroundImage: "url('/hero.png')" }}>
 
-    <Hero />
+    <Hero /> 
 </div>
 
  <AvailableProperties />

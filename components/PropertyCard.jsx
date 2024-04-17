@@ -45,9 +45,9 @@ const PropertyCard = ({ property }) => {
           <div className='text-gray-600'>{property.type}</div>
           <h3 className='text-xl font-bold'>{property.name}</h3>
         </div>
-        {/* <h3 className='absolute top-[10px] right-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right'>
+        <h3 className='absolute top-[10px] right-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right'>
           ${getRateDisplay()}
-        </h3> */}
+        </h3>
 
         <div className='flex justify-center gap-4 text-gray-500 mb-4'>
         <p>
@@ -106,6 +106,15 @@ const PropertyCard = ({ property }) => {
           >
             Details
           </Link>
+        </div>
+        <div>
+          <p>
+          Whether you find yourself in San Antonio for business, leisure, a special event, or in need of temporary housing during relocation, our accommodations are designed to provide the ideal fusion of convenience and relaxation.
+Live in complete comfort within a fully furnished home, boasting contemporary luxuries, just a short drive or stroll away from shopping, dining, and the vibrant downtown scene.
+With San Antonio's myriad attractions at your fingertips, we extend our invitation for you to stay in ”Tesla House” and fully
+Xperience theBeauty of this remarkable city.
+          </p>
+        
         </div>
       </div>
     </div>
