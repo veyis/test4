@@ -12,11 +12,9 @@ const HomePage = () => {
     <Hero />
 </div>
 
-<AvailableProperties />
-
-{/*  <InfoBoxes /> */}
-      {/* <FeaturedProperties /> */}
-      {/* <HomeProperties /> */}
+ <AvailableProperties />
+ <InfoBoxes /> 
+ 
     </>
   );
 };

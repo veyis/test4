@@ -40,9 +40,9 @@ const FeaturedPropertyCard = ({ property }) => {
       <div className='p-6'>
         <h3 className='text-xl font-bold'>{property.name}</h3>
         <div className='text-gray-600 mb-4'>{property.type}</div>
-        <h3 className='absolute top-[10px] left-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right'>
+        {/* <h3 className='absolute top-[10px] left-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right'>
           ${getRateDisplay()}
-        </h3>
+        </h3> */}
         <div className='flex justify-center gap-4 text-gray-500 mb-4'>
           
           <p>
