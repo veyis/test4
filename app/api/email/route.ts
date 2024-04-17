@@ -21,8 +21,9 @@ export async function POST(request: NextRequest) {
 
   const mailOptions: Mail.Options = {
     from: process.env.SMTP_EMAIL,
-    to: "vakgul@gmail.com",
-    cc: "vakgul@gmail.com", // cc: email, (uncomment this line if you want to send a copy to the sender)
+    to: "xperiencetheb@gmail.com",
+    cc: "vakgul@gmail.com",
+     // cc: email, (uncomment this line if you want to send a copy to the sender)
 
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${name} (${email})`,

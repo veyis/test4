@@ -14,6 +14,10 @@ module.exports = {
       gridTemplateColumns: {
         "70/30": "70% 28%",
       },
+      colors : {
+       
+          'cool-blue': '#457b9d'
+        }
     },
   },
   plugins: [],
