@@ -22,6 +22,12 @@ const nextConfig = {
         hostname: 'localhost',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+        pathname: '**',
+      },
+      
     ],
   },
 };
