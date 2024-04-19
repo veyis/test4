@@ -129,12 +129,56 @@ return (
                 </div>
               </dl>
             </div>
-          </div>
-        </div>
-      </main>
-    </div>
-    )
-}
 
+             {/* Property Details with extended info */}
+             <div className="mt-6 bg-white shadow overflow-hidden sm:rounded-lg">
+                        <div className="px-4 py-5 sm:px-6">
+                            <h2 className="text-lg leading-6 font-medium text-gray-900">Stunning Beach House</h2>
+                            <p className="mt-1 max-w-2xl text-sm text-gray-500">
+                                One of the most loved homes on Airbnb, rated 4.81 out of 5 stars from 42 reviews. 
+                                Great for remote work with fast wifi at 416 Mbps and a dedicated workspace. 
+                                Hosted by Aleksandra, a Superhost for 2 years. Self check-in with a keypad.
+                            </p>
+                        </div>
+                        <div className="border-t border-gray-200">
+                            <dl>
+                                {/* More detailed information */}
+                                <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt className="text-sm font-medium text-gray-500">Guests</dt>
+                                    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Up to 6 people</dd>
+                                </div>
+                                <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt className="text-sm font-medium text-gray-500">Amenities</dt>
+                                    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        Electric car charger, BBQ, hot tub (on request, additional fee)
+                                    </dd>
+                                </div>
+                                <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt className="text-sm font-medium text-gray-500">Accessibility</dt>
+                                    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        Not ADA accessible, has stairs
+                                    </dd>
+                                </div>
+                                <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                    <dt className="text-sm font-medium text-gray-500">Location</dt>
+                                    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                        Centrally located in a historical district, 5-min drive to downtown SATX
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            </main>
+            </div>
+
+
+
+        
+       
+    )
+                                
+}
 
 export default page
