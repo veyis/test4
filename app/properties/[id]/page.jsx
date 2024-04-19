@@ -271,11 +271,12 @@ const PropertyPage = () => {
 
     <TeslaAmen />
     <TeslaMap1 />
+    <ThingsToKnow />
 
 
 </div>
 
-<ThingsToKnow />
+
 
 							</div>
 						</div>
