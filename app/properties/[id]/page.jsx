@@ -1,232 +1,251 @@
-'use client';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-import { fetchProperty } from '@/utils/requests';
-import PropertyHeaderImage from '@/components/PropertyHeaderImage';
-import PropertyDetails from '@/components/PropertyDetails';
-import PropertyImages from '@/components/PropertyImages';
-import BookmarkButton from '@/components/BookmarkButton';
-import PropertyContactForm from '@/components/PropertyContactForm';
-import ShareButtons from '@/components/ShareButtons';
-import Spinner from '@/components/Spinner';
-import { FaArrowLeft } from 'react-icons/fa';
-import propertiesData from '@/constants/properties';
+"use client";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import { fetchProperty } from "@/utils/requests";
+import PropertyHeaderImage from "@/components/PropertyHeaderImage";
+import PropertyDetails from "@/components/PropertyDetails";
+import PropertyImages from "@/components/PropertyImages";
+import BookmarkButton from "@/components/BookmarkButton";
+import PropertyContactForm from "@/components/PropertyContactForm";
+import ShareButtons from "@/components/ShareButtons";
+import Spinner from "@/components/Spinner";
+import { FaArrowLeft } from "react-icons/fa";
+import propertiesData from "@/constants/properties";
 import {
-  FaUsers,
-  FaBed,
-  FaBath,
-  FaRulerCombined,
-  FaMoneyBill,
-  FaMapMarker,
-} from 'react-icons/fa';
-import Image from 'next/image';
-
-
-
+	FaUsers,
+	FaBed,
+	FaBath,
+	FaRulerCombined,
+	FaMoneyBill,
+	FaMapMarker,
+} from "react-icons/fa";
+import Image from "next/image";
 
 const PropertyPage = () => {
-  const { id } = useParams();
+	const { id } = useParams();
 
-  const [property, setProperty] = useState(null);
-  const [loading, setLoading] = useState(true);
+	const [property, setProperty] = useState(null);
+	const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (!id) return;
+	useEffect(() => {
+		if (!id) return;
 
-    // Find the property by id in the imported properties data
-    const fetchedProperty = propertiesData.find(p => p.id === id); // Ensure your property objects have an 'id' field
+		// Find the property by id in the imported properties data
+		const fetchedProperty = propertiesData.find((p) => p.id === id); // Ensure your property objects have an 'id' field
 
-    if (fetchedProperty) {
-      setProperty(fetchedProperty);
-    } else {
-      console.error('Property not found');
-    }
+		if (fetchedProperty) {
+			setProperty(fetchedProperty);
+		} else {
+			console.error("Property not found");
+		}
 
-    setLoading(false);
-  }, [id]);
+		setLoading(false);
+	}, [id]);
 
+	if (!property && !loading) {
+		return (
+			<h1 className="text-center text-2xl font-bold mt-10">
+				Property Not Found
+			</h1>
+		);
+	}
 
-  if (!property && !loading) {
-    return (
-      <h1 className='text-center text-2xl font-bold mt-10'>
-        Property Not Found
-      </h1>
-    );
-  }
+	return (
+		<>
+			{loading && <Spinner loading={loading} />}
+			{!loading && property && (
+				<>
+					{/* <PropertyHeaderImage image={property.images[0]} /> */}
+					<section>
+						<div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+							<h1 className="text-2xl font-bold text-gray-700">
+								<br />
+								<p>★ Tesla House w/ Hot-Tub 3br/3bath 5min to Downtown</p>
+								<br />
+							</h1>
+							{/* Image Gallery */}
+							<div className="flex flex-wrap   bg-white shadow overflow-hidden sm:rounded-lg">
+								{/* Large Image */}
+								<div className="w-1/2">
+									<Image
+										src="/images/properties/s0.webp"
+										alt="Large Property Image"
+										width={800}
+										height={600}
+										layout="responsive"
+										objectFit="cover"
+										className="gap-1 px-1"
+										radius="rounded-lg"
+									/>
+								</div>
+								{/* Small Images */}
+								<div className="w-1/2 grid grid-rows-2 grid-cols-2 gap-1 p-0 relative">
+									{[0, 2, 5, 13].map((i) => (
+										<div key={i} className="relative w-full h-full">
+											<Image
+												src={`/images/properties/tesla${i}.jpg`}
+												alt={`Property Image ${i}`}
+												layout="fill"
+												objectFit="cover"
+												className="px-0"
+											/>
+										</div>
+									))}
+									<Link
+										href="/properties/photos"
+										className="absolute bottom-0 right-0 p-1 m-2 bg-gray-100 text-gray-800 rounded-lg"
+									>
+										Show all photos
+									</Link>
+								</div>
+							</div>
 
-  return (
-    <>
-      {loading && <Spinner loading={loading} />}
-      {!loading && property && (
-        <>
-          {/* <PropertyHeaderImage image={property.images[0]} /> */}
-          <section>
-          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <h1 className="text-2xl font-bold text-gray-700">
-           <br />
-            <p>
-            ★ Tesla House w/ Hot-Tub 3br/3bath 5min to Downtown
-            </p>
-        <br />
-          </h1>
-          {/* Image Gallery */}
-          <div className="flex flex-wrap   bg-white shadow overflow-hidden sm:rounded-lg">
-            {/* Large Image */}
-            <div className="w-1/2">
-              <Image
-                src="/images/properties/s0.webp"
-                alt="Large Property Image"
-                width={800}
-                height={600}
-                layout="responsive"
-                objectFit="cover"
-                className="gap-1 px-1"
-                radius="rounded-lg"
-              />
-            </div>
-            {/* Small Images */}
-            <div className="w-1/2 grid grid-rows-2 grid-cols-2 gap-1 p-0 relative">
-                            {[0, 2, 5, 13].map(i => (
-                                <div key={i} className="relative w-full h-full">
-                                    <Image
-                                        src={`/images/properties/tesla${i}.jpg`}
-                                        alt={`Property Image ${i}`}
-                                        layout="fill"
-                                        objectFit="cover"
-                                        className="px-0"
-                                    />
-                                </div>
-                            ))}
-                            <Link href="/properties/photos"
-                            className="absolute bottom-0 right-0 p-1 m-2 bg-gray-100 text-gray-800 rounded-lg">
-                                Show all photos
-                            
-                            </Link>
-                        </div>
-                    </div>
+							{/* Property Details */}
+							<div className="mt-6 bg-white shadow overflow-hidden sm:rounded-lg">
+								<div className="px-4 py-5 sm:px-6">
+									<h1 className="text-2xl leading-6 font-medium text-gray-900">
+										Entire home in San Antonio, Texas
+									</h1>
+									<br />
 
-          {/* Property Details */}
-          <div className="mt-6 bg-white shadow overflow-hidden sm:rounded-lg">
-            <div className="px-4 py-5 sm:px-6">
-              <h2 className="text-lg leading-6 font-medium text-gray-900">Entire home in San Antonio, Texas
+									<div className="flex gap-4 text-gray-500 mb-4">
+										<p>
+											<FaUsers className="inline mr-2" /> 6{" "}
+											<span className="md:hidden lg:inline">Max</span>
+										</p>
+										<p>
+											<FaBed className="inline mr-2" /> 3{" "}
+											<span className="md:hidden lg:inline">Beds</span>
+										</p>
+										<p>
+											<FaBath className="inline mr-2" />3{" "}
+											<span className="md:hidden lg:inline">Baths</span>
+										</p>
+										<p>
+											<FaRulerCombined className="inline mr-2" />
+											1500 <span className="md:hidden lg:inline">sqft</span>
+										</p>
+									</div>
 
-</h2>
-<br />
+								</div>
+								<div className="border-t border-gray-200">
+									<dl>
+										{/* Guests */}
+										<div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+											<dt className="text-sm font-medium text-gray-500">
+												Guests
+											</dt>
+											<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+												4
+											</dd>
+										</div>
+										{/* Bedrooms */}
+										<div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+											<dt className="text-sm font-medium text-gray-500">
+												Bedrooms
+											</dt>
+											<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+												2
+											</dd>
+										</div>
+										{/* Bathrooms */}
+										<div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+											<dt className="text-sm font-medium text-gray-500">
+												Bathrooms
+											</dt>
+											<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+												1.5
+											</dd>
+										</div>
+									</dl>
+								</div>
 
-<div className='flex gap-4 text-gray-500 mb-4'>
-        <p>
-            <FaUsers className='inline mr-2' /> 6 {' '}
-            <span className='md:hidden lg:inline'>Max</span>
-          </p>
-          <p>
-            <FaBed className='inline mr-2' /> 3{' '}
-            <span className='md:hidden lg:inline'>Beds</span>
-          </p>
-          <p>
-            <FaBath className='inline mr-2' />
-            3 <span className='md:hidden lg:inline'>Baths</span>
-          </p>
-          <p>
-            <FaRulerCombined className='inline mr-2' />
-            1500 {' '}
-            <span className='md:hidden lg:inline'>sqft</span>
-          </p>
-        </div>
+								{/* Property Details with extended info */}
+								<div className="mt-6 bg-white shadow overflow-hidden sm:rounded-lg">
+									<div className="px-4 py-5 sm:px-6">
+										<h2 className="text-lg leading-6 font-medium text-gray-900">
+											Stunning Beach House
+										</h2>
+										<p className="mt-1 max-w-2xl text-sm text-gray-500">
+											One of the most loved homes on Airbnb, rated 4.81 out of 5
+											stars from 42 reviews. Great for remote work with fast
+											wifi at 416 Mbps and a dedicated workspace. Hosted by
+											Aleksandra, a Superhost for 2 years. Self check-in with a
+											keypad.
+										</p>
+									</div>
+									<div className="border-t border-gray-200">
+										<dl>
+											{/* More detailed information */}
+											<div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt className="text-sm font-medium text-gray-500">
+													Guests
+												</dt>
+												<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													Up to 6 people
+												</dd>
+											</div>
+											<div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt className="text-sm font-medium text-gray-500">
+													Amenities
+												</dt>
+												<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													Electric car charger, BBQ, hot tub (on request,
+													additional fee)
+												</dd>
+											</div>
+											<div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt className="text-sm font-medium text-gray-500">
+													Accessibility
+												</dt>
+												<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													Not ADA accessible, has stairs
+												</dd>
+											</div>
+											<div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt className="text-sm font-medium text-gray-500">
+													Location
+												</dt>
+												<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													Centrally located in a historical district, 5-min
+													drive to downtown SATX
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
 
-              <p className="mt-1 max-w-2xl text-sm text-gray-500">6 guests 3 bedrooms 3 beds 3 baths</p>
-            </div>
-            <div className="border-t border-gray-200">
-              <dl>
-                {/* Guests */}
-                <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt className="text-sm font-medium text-gray-500">
-                    Guests
-                  </dt>
-                  <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    4
-                  </dd>
-                </div>
-                {/* Bedrooms */}
-                <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt className="text-sm font-medium text-gray-500">
-                    Bedrooms
-                  </dt>
-                  <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    2
-                  </dd>
-                </div>
-                {/* Bathrooms */}
-                <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt className="text-sm font-medium text-gray-500">
-                    Bathrooms
-                  </dt>
-                  <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    1.5
-                  </dd>
-                </div>
-              </dl>
-            </div>
+                <div className="container m-auto py-10 px-6">
+							<div className="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
+								<PropertyDetails property={property} />
+								<aside className="space-y-4">
+									<BookmarkButton property={property} />
+									<ShareButtons property={property} />
+									<PropertyContactForm property={property} />
+								</aside>
+							</div>
+						</div>
+							</div>
+						</div>
+					</section>
 
-             {/* Property Details with extended info */}
-             <div className="mt-6 bg-white shadow overflow-hidden sm:rounded-lg">
-                        <div className="px-4 py-5 sm:px-6">
-                            <h2 className="text-lg leading-6 font-medium text-gray-900">Stunning Beach House</h2>
-                            <p className="mt-1 max-w-2xl text-sm text-gray-500">
-                                One of the most loved homes on Airbnb, rated 4.81 out of 5 stars from 42 reviews. 
-                                Great for remote work with fast wifi at 416 Mbps and a dedicated workspace. 
-                                Hosted by Aleksandra, a Superhost for 2 years. Self check-in with a keypad.
-                            </p>
-                        </div>
-                        <div className="border-t border-gray-200">
-                            <dl>
-                                {/* More detailed information */}
-                                <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                    <dt className="text-sm font-medium text-gray-500">Guests</dt>
-                                    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Up to 6 people</dd>
-                                </div>
-                                <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                    <dt className="text-sm font-medium text-gray-500">Amenities</dt>
-                                    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                        Electric car charger, BBQ, hot tub (on request, additional fee)
-                                    </dd>
-                                </div>
-                                <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                    <dt className="text-sm font-medium text-gray-500">Accessibility</dt>
-                                    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                        Not ADA accessible, has stairs
-                                    </dd>
-                                </div>
-                                <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                    <dt className="text-sm font-medium text-gray-500">Location</dt>
-                                    <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                        Centrally located in a historical district, 5-min drive to downtown SATX
-                                    </dd>
-                                </div>
-                            </dl>
-                        </div>
-                    </div>
-            </div>
-            </div>
-
-          </section>
-
-          <section className='bg-blue-50'>
-            <div className='container m-auto py-10 px-6'>
-              <div className='grid grid-cols-1 md:grid-cols-70/30 w-full gap-6'>
-                <PropertyDetails property={property} />
-                <aside className='space-y-4'>
-                  <BookmarkButton property={property} />
-                  <ShareButtons property={property} />
-                  <PropertyContactForm property={property} />
-                </aside>
-              </div>
-            </div>
-          </section>
-          <PropertyImages images={property.images} />
-        </>
-      )}
-    </>
-  );
+					<section className="bg-blue-50">
+						<div className="container m-auto py-10 px-6">
+							<div className="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
+								<PropertyDetails property={property} />
+								<aside className="space-y-4">
+									<BookmarkButton property={property} />
+									<ShareButtons property={property} />
+									<PropertyContactForm property={property} />
+								</aside>
+							</div>
+						</div>
+					</section>
+				
+				</>
+			)}
+		</>
+	);
 };
 export default PropertyPage;

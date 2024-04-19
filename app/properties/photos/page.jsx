@@ -17,6 +17,7 @@ const photos = () => {
         { id: 12, url: '/images/properties/tesla11.jpg', alt: 'Photo 12', description: 'Tesla House 12, San Antonio  '},
         { id: 13, url: '/images/properties/tesla12.jpg', alt: 'Photo 13', description: 'Tesla House 13, San Antonio  '},
         { id: 14, url: '/images/properties/tesla13.jpg', alt: 'Photo 14', description: 'Tesla House 14, San Antonio  '},
+        { id: 1, url: '/images/properties/tesla0.jpg', alt: 'Photo 1', description: 'Tesla House 1, San Antonio  ' },
         { id: 15, url: '/images/properties/tesla14.jpg', alt: 'Photo 15', description: 'Tesla House 15, San Antonio  '},
         { id: 16, url: '/images/properties/tesla15.jpg', alt: 'Photo 16', description: 'Tesla House 16, San Antonio  '},
         { id: 17, url: '/images/properties/tesla16.jpg', alt: 'Photo 17', description: 'Tesla House 17, San Antonio  '},
@@ -28,7 +29,7 @@ const photos = () => {
   return (
    
 <div className="container mx-auto px-4">
-      <h1 className="text-center text-4xl font-bold my-8">Photo Portfolio</h1>
+      <h1 className="text-center text-4xl font-bold my-8">All Photos</h1>
       <PhotoGallery photos={photos} />
     </div>
   )
