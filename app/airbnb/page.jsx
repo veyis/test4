@@ -8,9 +8,12 @@ import {
     FaMoneyBill,
     FaMapMarker,
   } from 'react-icons/fa';
-  
+
+  import PhotoGallery from '@/components/PhotoGallery';
 
 const page = () => {
+
+    
 return (
 <div className="bg-white">
       {/* Header
@@ -170,6 +173,10 @@ return (
                     </div>
             </div>
             </div>
+
+
+
+
             </main>
             </div>
 
