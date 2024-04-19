@@ -87,10 +87,10 @@ const PropertyPage = () => {
             </div>
             {/* Small Images */}
             <div className="w-1/2 grid grid-rows-2 grid-cols-2 gap-1 p-0 relative">
-                            {[1, 2, 3, 4].map(i => (
+                            {[0, 2, 5, 13].map(i => (
                                 <div key={i} className="relative w-full h-full">
                                     <Image
-                                        src={`/images/properties/s${i}.jpeg`}
+                                        src={`/images/properties/tesla${i}.jpg`}
                                         alt={`Property Image ${i}`}
                                         layout="fill"
                                         objectFit="cover"

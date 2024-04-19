@@ -16,8 +16,8 @@ function PhotoGallery({ photos }) {
             className="rounded-lg shadow-lg"
           />
           <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full rounded-b-lg">
-             {/* {photo.description} */}
-             Tesla House, San Antonio, Texas
+             {photo.description} 
+             
           </div>
         </div>
       ))}
