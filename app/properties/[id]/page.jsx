@@ -66,7 +66,7 @@ const PropertyPage = () => {
 				<>
 					{/* <PropertyHeaderImage image={property.images[0]} /> */}
 					<section>
-						<div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+						<div className="sm:px-6 lg:px-8 px-2">
 							<h1 className="text-2xl font-bold text-gray-700">
 								<br />
 								<p>★ Tesla House w/ Hot-Tub 3br/3bath 5min to Downtown</p>
@@ -112,9 +112,9 @@ const PropertyPage = () => {
 							{/* Property Details */}
 							<div className="mt-6 bg-white shadow overflow-hidden sm:rounded-lg ">
 								<div className="px-4 py-5 sm:px-6 ">
-									<h1 className="text-2xl leading-6 font-medium text-gray-900">
+									<h2 className="text-2xl leading-6 font-medium text-gray-900">
 										Entire home in San Antonio, Texas
-									</h1>
+									</h2>
 									<br />
 
 									<div className="flex gap-4 text-gray-500 mb-4">

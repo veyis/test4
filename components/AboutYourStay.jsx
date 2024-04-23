@@ -41,7 +41,7 @@ const AboutYourStay = () => {
         </div>
 
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
+          <div className="flex">
             <FaTimes className="text-xl mr-2" />
             Cancellation:
           </div>

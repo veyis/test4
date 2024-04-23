@@ -18,7 +18,7 @@ const AboutUs = () => {
 							/>{" "}
 						</div>
 					</div>
-					<div className="md:col-span-7 text-lg font-light text-gray-700 space-y-4">
+					<div className="md:col-span-7 text-gray-700 space-y-4">
 						<div class="container">
 							<h1>Hello there! We are Aleksandra and Randy. </h1>
 							
