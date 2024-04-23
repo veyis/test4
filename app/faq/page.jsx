@@ -10,10 +10,7 @@ const faqs = [
         <p>Each bedroom features a queen-size bed, while the living room contains two sofas, which, although not convertible to beds, come with extra bedding.</p>
       </>
     },
-    {
-      question: "What amenities are included?",
-      answer: <p>All amenities are listed on the property tab, under “Amenities”.</p>
-    },
+ 
     {
       question: "Do any of the amenities require an additional fee to be paid prior to using them ?",
       answer: <>
