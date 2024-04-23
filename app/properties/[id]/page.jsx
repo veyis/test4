@@ -66,10 +66,10 @@ const PropertyPage = () => {
 				<>
 					{/* <PropertyHeaderImage image={property.images[0]} /> */}
 					<section>
-						<div className="sm:px-6 lg:px-8 px-2">
+						<div className="sm:px-6 lg:px-8">
 							<h1 className="text-2xl font-bold text-gray-700">
 								<br />
-								<p>★ Tesla House w/ Hot-Tub 3br/3bath 5min to Downtown</p>
+								<p className="px-2">★ Tesla House w/ Hot-Tub 3br/3bath 5min to Downtown</p>
 								<br />
 							</h1>
 							{/* Image Gallery */}
