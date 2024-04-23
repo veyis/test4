@@ -143,7 +143,7 @@ const PropertyPage = () => {
 										height={50}
 										className="rounded-lg"
 									/>
-									<span className="text-lg">
+									<span className="text-lg text-gray-800 py-1 px-2">
 										{" "}
 										One of the most loved homes on Airbnb <br />
 										based on ratings, reviews, and reliability.
@@ -157,7 +157,7 @@ const PropertyPage = () => {
 									/>
 								</div>
 
-								<div className="max-w-md  p-4 bg-white shadow-lg rounded-lg flex items-start space-x-4">
+								<div className="max-w-md  p-4 flex items-start space-x-4">
 									<MdWifi className="w-8 h-8 text-blue-500" />{" "}
 									{/* Wi-Fi icon component */}
 									<div className="flex flex-col">
@@ -171,7 +171,7 @@ const PropertyPage = () => {
 									</div>
 								</div>
 
-								<div className="max-w-md  p-4 bg-white shadow-lg rounded-lg flex items-start space-x-4">
+								<div className="max-w-md  p-4 flex items-start space-x-4">
 									<MdKeyboard className="w-8 h-8 text-blue-500" />{" "}
 									{/* Keyboard icon as a placeholder for a keypad */}
 									<div className="flex flex-col">
@@ -184,7 +184,7 @@ const PropertyPage = () => {
 									</div>
 								</div>
 
-								<div class="max-w-4xl  p-6 bg-white shadow-lg rounded-lg">
+								<div class="p-6">
 									<h2 class="text-xl font-bold text-gray-800 mb-4">
 										House for LONG TERM STAYS (minimum 30 days)
 									</h2>
@@ -264,24 +264,17 @@ const PropertyPage = () => {
 									</div>
 								</div>
 
-                <div class="max-w-4xl  p-6 bg-white shadow-lg rounded-lg">
-  
-{/*    
+								<div class="max-w-4xl  p-6 bg-white shadow-lg rounded-lg">
+									{/*    
     <Amenities amenities={property.amenities} /> */}
 
-    <TeslaAmen />
-    <TeslaMap1 />
-    <ThingsToKnow />
-
-
-</div>
-
-
-
+									<TeslaAmen />
+									<TeslaMap1 />
+									<ThingsToKnow />
+								</div>
 							</div>
 						</div>
 					</section>
-
 				</>
 			)}
 		</>
