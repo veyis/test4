@@ -18,7 +18,7 @@ const properties = [
       beds: 3,
       baths: 3,
       maxGuests: 6,
-      square_feet: 1500,
+      square_feet: 1884,
       amenities: ["Fridge & Freezer with LCD entertainment screen and filtered water dispenser",
       "Gas Stove and Oven with Fume Hood",
       "Dish Washer",
