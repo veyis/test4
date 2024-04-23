@@ -6,10 +6,8 @@ const faqs = [
     {
       question: "What is the maximum occupancy for the house?",
       answer: <>
-        <p>Tesla House comfortably accommodates:</p>
-        <p>6 guests for long stays (minimum 30 days)<br />
-        8 guests for short stays (minimum 2 days)</p>
-        <p>Each bedroom features a queen-size bed, while the living room contains two sofas, which, although not convertible to beds, come with bedding provided for additional guests.</p>
+        <p className='py-1'>Tesla House comfortably accommodates: 6 guests</p>
+        <p>Each bedroom features a queen-size bed, while the living room contains two sofas, which, although not convertible to beds, come with extra bedding.</p>
       </>
     },
     {
@@ -17,16 +15,16 @@ const faqs = [
       answer: <p>All amenities are listed on the property tab, under “Amenities”.</p>
     },
     {
-      question: "Do any of the amenities require an additional fee charge?",
+      question: "Do any of the amenities require an additional fee to be paid prior to using them ?",
       answer: <>
-        <p>Yes. The Hot Tub and Car Charger are available upon request for an additional charge.</p>
-        <p>The Hot Tub requires routine maintenance to ensure that the quality of the water and balance of chemicals is professionally managed. Upon request, the Hot Tub can be filled and maintained during your stay for an additional charge of $200 per month.</p>
-        <p>The Car Charger can be used upon request during your booking for an additional charge of $25 per week or $100 per month.</p>
+        <p className='py-1'>Yes. The Hot Tub and Car Charger are available upon request for an additional fee.</p> 
+        <p className='py-1'>The Hot Tub requires routine maintenance to ensure that the quality of the water and balance of chemicals is professionally managed. Upon request, the Hot Tub can be filled and maintained during your stay for an additional fee of $200 per month.</p> 
+        <p className='py-1'>The Car Charger can be used upon request during your booking for an additional fee of $25 per week or $100 per month.</p>
       </>
     },
     {
       question: "What type of car charger is available?",
-      answer: <p>Equipped with Gen 3 Tesla wall charger & a J1772 compatible charging adapter for other electric vehicles.</p>
+      answer: <p>Home is equipped with a Tesla Gen 3 wall connector & a J1772 compatible charging adapter for other EV vehicles.</p>
     },
     {
       question: "Are pets allowed?",
@@ -35,7 +33,7 @@ const faqs = [
     {
       question: "Is the house accessible to persons with disabilities?",
       answer: <>
-        <p>This home is not ADA accessible. It is elevated on a pier and beam foundation and has a small flight of stairs at the front entrance and at the rear patio. The path from the driveway to the front of the house has a stone path.</p>
+        <p>This home is not ADA accessible. It is elevated on a pier and beam foundation and has a small flight of stairs at the front entrance and at the rear patio. The path from the driveway to the front of the house has a stone walkway</p>
       </>
     },
     {
@@ -50,10 +48,7 @@ const faqs = [
         <p>Yes, there is a shorter fence in the front of the property with a pair of gates for vehicular access to the driveway and a separate gate for pedestrian access. At the rear of the property is an 8-foot-tall wood picket privacy fence.</p>
       </>
     },
-    {
-      question: "How far is Downtown and other attractions from the house?",
-      answer: <p>Refer to the 'Property' tab within the 'Where you'll be' section for a map displaying approximate distances to nearby attractions.</p>
-    },
+
     {
       question: "What is your cancellation policy?",
       answer: <p>You are eligible for a complete refund if you cancel your reservation at least 7 days before your check-in date.</p>

@@ -111,7 +111,7 @@ const TeslaAmen = () => {
         <div>
             <h3 class="font-semibold text-gray-700">Services</h3>
             <ul class="list-disc list-inside text-gray-600">
-                <li>Long term stays allowed (28 days or more)</li>
+                <li>Long term stays allowed (30 days or more)</li>
                 <li>Self check-in via keypad</li>
                 <li>Cleaning available during stay</li>
             </ul>

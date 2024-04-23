@@ -24,7 +24,7 @@ const Hero = () => {
         </button> */}
         <br /> 
         
-        <p>Stay at our 'Tesla House' and discover San Antonio's attractions at your fingertips. </p>
+        <p>Stay at our "Tesla House" and discover San Antonio's attractions at your fingertips. </p>
       </div>
     </section>
   );

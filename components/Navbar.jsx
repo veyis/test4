@@ -50,7 +50,7 @@ const Navbar = () => {
 							<Image className="h-10 w-auto" src={logo} alt="Xperiencetheb" />
 
 							<span className="hidden md:block text-white text-2xl font-bold ml-2">
-								Xperiencetheb
+								XperiencetheB
 							</span>
 						</Link>
 						{/* <!-- Desktop Menu Hidden below md screens --> */}
