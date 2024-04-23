@@ -14,9 +14,9 @@ import propertiesData from "@/constants/properties";
 import { MdWifi } from "react-icons/md"; // Corrected icon import
 import { MdKeyboard } from "react-icons/md"; // Importing a keyboard icon which can symbolize a keypad
 import Amenities from "@/components/Amenities";
-import TeslaAmen from "@/components/TeslaAmen";
 import TeslaMap1 from "@/components/TeslaMap1";
 import ThingsToKnow from "@/components/ThingsToKnow";
+import TeslaAmenities from "@/components/TeslaAmenities";
 
 import {
 	FaUsers,
@@ -184,94 +184,107 @@ const PropertyPage = () => {
 									</div>
 								</div>
 
-								<div class="p-6">
-									<h2 class="text-xl font-bold text-gray-800 mb-4">
-										House for LONG TERM STAYS (minimum 30 days)
+								<div class="bg-white text-gray-900  p-6">
+									<h1 class="text-2xl font-bold uppercase mb-4">
+										About the House
+									</h1>
+
+									<div class="space-y-4">
+										<p>
+											Tesla House is a single story 3-bed 3-bath craftsman
+											bungalow exuding warmth and grandeur with its 11’ high
+											ceilings, natural wood finishes, and inviting open floor
+											plan. Situated just east of downtown San Antonio in the
+											charming Dignowity Hill historic district, known for its
+											rich architectural heritage and vibrant community spirit.
+										</p>
+										<p>
+											House is not ADA accessible, has stairs and stone walking
+											paths.
+										</p>
+
+										<div className="p-0">
+											<div>
+												<h4 className="text-md font-semibold py-0">
+													Long Term Stays :{" "}
+													<span className="font-light">Minimum 30 days</span>
+												</h4>
+											</div>
+
+											<div>
+												<h2 class="text-md font-semibold py-0">
+													Short Term Stays :{" "}
+													<span className="font-light">Minimum 2 days</span>{" "}
+												</h2>
+											</div>
+										</div>
+
+										<div>
+											<h2 class="text-2xl font-semibold py-2">The Space</h2>
+											<p className="py-1">
+												House is warm and inviting with the living room, dining
+												room and kitchen connected in a flowing linear path,
+												creating a spacious yet intimate area perfect for
+												socializing and gatherings. Adjacent to the dining area
+												are two bedrooms and bathroom featuring a double vanity.
+												Each bedroom boasts a queen-sized bed for your comfort.
+												Towards the rear end of the house, discover master
+												bedroom, complete with a queen-sized bed, its own split
+												system HVAC ensuring personalized comfort, an en-suite
+												bathroom, and a walk-in closet. The laundry room and an
+												additional bathroom are conveniently situated nearby,
+												adjacent to the kitchen.
+											</p>
+										</div>
+
+										<p>
+											Throughout the home, central air HVAC ensures optimal
+											climate control, while a soft water system ensures quality
+											water flow from every faucet. The refrigerator is equipped
+											with a filtered water dispenser and an LCD entertainment
+											screen.
+										</p>
+										<p>
+											Outside, the large backyard offers privacy with its tall
+											fence, featuring a patio equipped with misters for hot
+											days, a hot tub, and a BBQ grill.
+										</p>
+									</div>
+								</div>
+
+								<div className="bg-gray-50 p-4">
+									<h2 className="text-lg font-semibold text-gray-900 mb-6">
+										Where You'll Sleep?
 									</h2>
-									<p class="text-gray-600">
-										This unique 3 bed, 3 bath house has a style all its own
-										combining local historical charm with a touch of modern
-										flare. Centrally located in a historical district just a
-										5-minute drive to downtown SATX, The Alamo, River Walk,
-										Hemisfair Park, Alamodome, Pearl Brewery & the AT&T Center.
-									</p>
-									<ul class="list-disc list-inside mt-4 mb-4 text-gray-600">
-										<li>Large back yard with BBQ</li>
-										<li>
-											Electric car charger available upon request (additional
-											fee)
-										</li>
-										<li>Hot tub available upon request (additional fee)</li>
-										<li>Not ADA accessible and has stairs</li>
-									</ul>
-									<div class="font-semibold text-gray-800 mb-2">The space</div>
-									<p class="text-gray-600">
-										House is warm and inviting with the living room, dining
-										room, and kitchen connected in a flowing linear path on the
-										right side of the house and two bedrooms separated by a
-										large bathroom on the left side. At the back of the house is
-										the Master bedroom with its own split system HVAC, in-suite
-										bathroom and walk-in closet. Laundry room and 3rd bathroom
-										are adjacent to the kitchen in the rear of the house.
-										Ceilings are 11 feet high throughout the house giving a
-										spacious feel to each of the rooms. A central HVAC system
-										heats and cools the entire house. A soft water system
-										provides water to all faucets in the house.
-									</p>
-									<div class="font-semibold text-gray-800 mb-2">
-										Guest access
-									</div>
-									<ul class="list-disc list-inside text-gray-600">
-										<li>
-											The private, gated driveway is suitable for up to (3) cars
-											parked in a single line.
-										</li>
-										<li>
-											There is plenty of curb-side parking available in front of
-											the property.
-										</li>
-										<li>
-											House can accommodate up to 6 people maximum. The three
-											bedrooms each have one queen sized bed.
-										</li>
-										<li>
-											Kitchen is supplied with numerous amenities including
-											cooking essentials, an air fryer, microwave, Keurig coffee
-											maker, kettle, cookware to prepare meals, and food storage
-											containers.
-										</li>
-										<li>
-											Front loading washer and dryer with top loading for small
-											loads.
-										</li>
-										<li>
-											Security is provided with 24/7 professionally monitored
-											camera surveillance. NO cameras are located inside the
-											house.
-										</li>
-										<li>
-											Electric car charger: Gen 3 Tesla wall charger & a J1772
-											compatible charging adapter for other electric vehicles.
-										</li>
-									</ul>
-									<div class="mt-4">
-										<span class="font-semibold text-gray-800">CHECK-IN:</span>{" "}
-										4:00 pm <br />
-										<span class="font-semibold text-gray-800">
-											CHECK-OUT:
-										</span>{" "}
-										10:00 am
+									<div className="flex gap-4">
+										{/* Bedroom 1 */}
+										<div className="flex flex-col items-center bg-white p-4 rounded-lg shadow">
+											<FaBed className="text-2xl mb-2" />
+											<h3 className="font-semibold">Bedroom 1</h3>
+											<p>Queen Bed</p>
+										</div>
+
+										{/* Bedroom 2 */}
+										<div className="flex flex-col items-center bg-white p-4 rounded-lg shadow">
+											<FaBed className="text-2xl mb-2" />
+											<h3 className="font-semibold">Bedroom 2</h3>
+											<p>Queen Bed</p>
+										</div>
+
+										{/* Bedroom 3 */}
+										<div className="flex flex-col items-center bg-white p-4 rounded-lg shadow">
+											<FaBed className="text-2xl mb-2" />
+											<h3 className="font-semibold">Bedroom 3</h3>
+											<p>Queen Bed</p>
+										</div>
 									</div>
 								</div>
 
-								<div class="max-w-4xl  p-6 bg-white shadow-lg rounded-lg">
-									{/*    
-    <Amenities amenities={property.amenities} /> */}
+								<TeslaAmenities />
 
-									<TeslaAmen />
-									<TeslaMap1 />
-									<ThingsToKnow />
-								</div>
+
+							 <TeslaMap1 />
+									<ThingsToKnow /> 
 							</div>
 						</div>
 					</section>
