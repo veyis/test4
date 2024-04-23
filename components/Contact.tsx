@@ -32,8 +32,8 @@ const Contact: FC = () => {
 	const numberOfChildren = watch("children", 0); // Default value of 0
 
 	// Calculate the remaining options
-	const maxAdults = Math.max(0, 8 - numberOfChildren);
-	const maxChildren = Math.max(0, 8 - numberOfAdults);
+	const maxAdults = Math.max(0, 6 - numberOfChildren);
+	const maxChildren = Math.max(0, 6 - numberOfAdults);
 
 	// Get today's date in YYYY-MM-DD format
 	const today = new Date().toISOString().split("T")[0];
