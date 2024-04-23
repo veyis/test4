@@ -3,3 +3,16 @@
 @tailwind utilities;
 
 
+.buttonPhoto {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white; /* Ensure contrast for visibility */
+    font-size: 24px; /* Adjust size to make them more visible */
+    z-index: 60; /* Higher than the modal's content */
+}
+
+.modal-overlay {
+    z-index: 1000; /* Very high to ensure it's on top */
+}
+
