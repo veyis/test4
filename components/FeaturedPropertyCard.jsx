@@ -26,17 +26,15 @@ const FeaturedPropertyCard = ({ property }) => {
 
   return (
     <div className='bg-white rounded-xl shadow-md relative flex flex-col md:flex-row'>
-      <Image
-        src={
-          `/images/properties/${property.images[0]}` ||
-          '/images/properties/sample.jpg'
-        }
-        alt=''
-        width={0}
-        height={0}
-        sizes='100vw'
-        className='object-cover rounded-t-xl md:rounded-tr-none md:rounded-l-xl w-full md:w-2/5'
-      />
+  <Image
+    src={property.images[0] ? `/images/properties/${property.images[0]}` : '/images/properties/sample.jpg'}
+    alt="Description of the image"  // It's good practice to add a meaningful alt text for accessibility
+    width={800}   // Specify a non-zero width
+    height={600}  // Specify a non-zero height
+    sizes="100vw" // This is typically used for responsive images, can be adjusted as needed
+    fit="cover"   // Ensures the image covers the area of the container without stretching
+    className="object-cover rounded-t-xl md:rounded-tr-none md:rounded-l-xl w-full md:w-2/5"
+/>
       <div className='p-6'>
         <h3 className='text-xl font-bold'>{property.name}</h3>
         <div className='text-gray-600 mb-4'>{property.type}</div>
@@ -93,7 +91,7 @@ const FeaturedPropertyCard = ({ property }) => {
             <FaMapMarker className='text-lg text-orange-700' />
             <span className='text-orange-700'>
               {' '}
-              {property.location.city} {property.location.state}
+              {property.location.city}, {property.location.state}
             </span>
           </div>
           <Link

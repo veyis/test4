@@ -75,7 +75,7 @@ const PropertyPage = () => {
 								{/* Large Image */}
 								<div className="w-1/2">
 									<Image
-										src="/images/properties/s0.webp"
+										src="/images/properties/tesla0.jpg"
 										alt="Large Property Image"
 										width={800}
 										height={600}
@@ -87,7 +87,7 @@ const PropertyPage = () => {
 								</div>
 								{/* Small Images */}
 								<div className="w-1/2 grid grid-rows-2 grid-cols-2 gap-1 p-0 relative">
-									{[0, 2, 5, 13].map((i) => (
+									{[1, 2, 5, 13].map((i) => (
 										<div key={i} className="relative w-full h-full">
 											<Image
 												src={`/images/properties/tesla${i}.jpg`}
