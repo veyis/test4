@@ -21,66 +21,87 @@ const Modal = ({ children, onClose }) => {
 };
 
 const amenities = {
-	ScenicViews: [
-		{ icon: "🌄", label: "Garden view" },
-	],
-	Bathroom: [
-		{ icon: "🛁", label: "Bathtub" },
-		{ icon: "💇‍♀️", label: "Hair dryer" },
-		{ icon: "🧼", label: "Cleaning products" },
-		{ icon: "🧴", label: "Ginger Lily Farms shampoo" },
-		{ icon: "🧴", label: "Ginger Lily Farms conditioner" },
-		{ icon: "🧴", label: "Ginger Lily Farms body soap" },
-		{ icon: "🚿", label: "Hot water" },
-		{ icon: "🧴", label: "Shower gel" },
-	],
-	Bedroom: [
-		{ icon: "🛏️", label: "Queen bed" },
-		{ icon: "🛏️", label: "Extra pillows and blankets" },
-		{ icon: "🧺", label: "Walk-in closet" },
-		{ icon: "🧺", label: "Closet" },
-		{ icon: "🪟", label: "Room-darkening shades" },
-	],
-	Kitchen: [
-		{ icon: "🍽️", label: "Dishwasher" },
-		{ icon: "🥄", label: "Cooking basics" },
-		{ icon: "🥣", label: "Dishes and silverware" },
-		{ icon: "☕", label: "Coffee maker: Keurig" },
-		{ icon: "🍷", label: "Wine glasses" },
-		{ icon: "🍳", label: "Pots and pans" },
-		{ icon: "🥘", label: "Whirlpool stainless steel stove" },
-		{ icon: "🍪", label: "Baking sheet" },
-		{ icon: "🔥", label: "Barbecue utensils" },
-	],
-	LivingRoom: [
-		{ icon: "🛋️", label: "Living room" },
-		{ icon: "📺", label: "65 inch HDTV with standard cable" },
-		{ icon: "🎮", label: "Board games" },
-	],
-	LaundryRoom: [
-		{ icon: "🧺", label: "Washer" },
-		{ icon: "🧺", label: "Dryer" },
-		{ icon: "🧼", label: "Iron" },
-	],
-	Outside: [
-		{ icon: "🌳", label: "Patio or balcony" },
-		{ icon: "🏞️", label: "Private backyard" },
-		{ icon: "🍖", label: "BBQ grill" },
-	],
-	Other: [
-		{ icon: "🚗", label: "Free parking on premises" },
-		{ icon: "🔌", label: "EV charger - level 2, tesla only" },
-		{ icon: "🔒", label: "Security cameras" },
-		{ icon: "🔊", label: "Noise decibel monitors" },
-		{ icon: "🌐", label: "Fast wifi – 416 Mbps" },
-		{ icon: "🖥️", label: "Dedicated workspace" },
-		{ icon: "🧹", label: "Cleaning available during stay" },
-		{ icon: "🔥", label: "Central heating" },
-		{ icon: "❄️", label: "Central air conditioning" },
-		{ icon: "🔥", label: "Fire extinguisher" },
-		{ icon: "⏱️", label: "Long term stays allowed" },
-	],
+  ScenicViews: [
+      { icon: "🌄", label: "Garden view" }
+  ],
+  Bathroom: [
+      { icon: "🛁", label: "Bathtub" },
+      { icon: "💇‍♀️", label: "Hair dryer" },
+      { icon: "🧼", label: "Cleaning products" },
+      { icon: "🧴", label: "Ginger Lily Farms shampoo" },
+      { icon: "🧴", label: "Ginger Lily Farms conditioner" },
+      { icon: "🧴", label: "Ginger Lily Farms body soap" },
+      { icon: "🚿", label: "Hot water" },
+      { icon: "🧴", label: "Shower gel" }
+  ],
+  BedroomAndLaundry: [
+      { icon: "🛏️", label: "Essentials (Towels, bed sheets, soap, toilet paper)" },
+      { icon: "🧺", label: "Hangers" },
+      { icon: "🛏️", label: "Bed linens" },
+      { icon: "🛏️", label: "Clara Clark linens" },
+      { icon: "🛏️", label: "Extra pillows and blankets" },
+      { icon: "🪟", label: "Room-darkening shades" },
+      { icon: "👗", label: "Iron" },
+      { icon: "🚪", label: "Walk-in closet and closet" },
+      { icon: "🧼", label: "Free washer – In unit" },
+      { icon: "🧼", label: "Free dryer – In building" }
+  ],
+  Entertainment: [
+      { icon: "📺", label: "65 inch HDTV with standard cable" }
+  ],
+  Family: [
+      { icon: "🎲", label: "Board games" }
+  ],
+  HeatingAndCooling: [
+      { icon: "❄️", label: "Central air conditioning" },
+      { icon: "🌀", label: "Ceiling fan" },
+      { icon: "🌬️", label: "Portable fans" },
+      { icon: "🔥", label: "Central heating" }
+  ],
+  HomeSafety: [
+      { icon: "🔊", label: "Noise decibel monitors on property" },
+      { icon: "🎥", label: "Exterior security cameras on property" },
+      { icon: "🚨", label: "Security system with sensors" },
+      { icon: "🔥", label: "Smoke alarm" },
+      { icon: "⚠️", label: "Carbon monoxide alarm" },
+      { icon: "🧯", label: "Fire extinguisher" }
+  ],
+  InternetAndOffice: [
+      { icon: "🌐", label: "Fast wifi – 416 Mbps" },
+      { icon: "💼", label: "Dedicated workspace in a common space" }
+  ],
+  KitchenAndDining: [
+      { icon: "🍳", label: "Kitchen" },
+      { icon: "🍽️", label: "Dishes and silverware" },
+      { icon: "🍴", label: "Cooking basics" },
+      { icon: "🍷", label: "Wine glasses" },
+      { icon: "☕", label: "Keurig coffee machine" },
+      { icon: "🥘", label: "Whirlpool appliances (stove, oven)" },
+      { icon: "🍴", label: "Barbecue utensils" },
+      { icon: "🥘", label: "Baking sheet" }
+  ],
+  LocationFeatures: [
+      { icon: "🚪", label: "Private entrance" }
+  ],
+  Outdoor: [
+      { icon: "🌳", label: "Private backyard – Fully fenced" },
+      { icon: "🪑", label: "Outdoor furniture" },
+      { icon: "🍖", label: "BBQ grill: gas" },
+      { icon: "🌳", label: "Private patio or balcony" },
+      { icon: "🌳", label: "Outdoor dining area" }
+  ],
+  ParkingAndFacilities: [
+      { icon: "🚗", label: "Free carport on premises" },
+      { icon: "🚗", label: "Free street parking" },
+      { icon: "🔌", label: "EV charger - level 2, Tesla only" }
+  ],
+  Services: [
+      { icon: "📅", label: "Long term stays allowed" },
+      { icon: "🔑", label: "Self check-in" },
+      { icon: "🧹", label: "Cleaning available during stay" }
+  ]
 };
+
 
 
 // Main component to display Tesla amenities with modal for detailed view
@@ -137,13 +158,13 @@ const TeslaAmenities = () => {
 			{isModalOpen && (
 	<Modal onClose={toggleModal}>
   <div className="modal-content max-h-[80vh] overflow-auto"> {/* Added class for scrolling */}
-      <h2 className="text-xl font-bold mb-4">What this place offers</h2>
+      <h2 className="text-xl font-bold mb-4">What this place offers?</h2>
       <section className="bg-gray-100 py-8">
           <div className="container mx-auto px-4">
          
               <div>
                   {Object.keys(amenities).map((category) => (
-                      <div key={category}>
+                      <div className="py-2" key={category}>
                           <h3 className="text-lg font-medium">{category}</h3>
                           <ul className="mt-4 space-y-3">
                               {Array.isArray(amenities[category]) ? (

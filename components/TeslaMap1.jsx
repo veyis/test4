@@ -3,10 +3,9 @@ import React from 'react'
 const TeslaMap1 = () => {
   return (
 <>
-<div class="max-w-5xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+<div class="p-6 bg-white">
     <h2 class="text-2xl font-bold text-gray-800 mb-4">Where you'll be</h2>
-    <p class="text-gray-600">San Antonio, Texas, United States</p>
-
+    
     <div class="h-90 bg-gray-200 mt-4 mb-4">
       
     <iframe
@@ -21,7 +20,7 @@ const TeslaMap1 = () => {
 
     </div>
 
-
+{/* 
     <h3 class="font-semibold text-gray-700 mb-2">Points of Interest</h3>
     <ul class="list-disc list-inside text-gray-600">
         <li>The Alamo</li>
@@ -44,11 +43,11 @@ const TeslaMap1 = () => {
         <li>McNay Art Museum</li>
         <li>Mission San Jose</li>
         <li>Splashtown</li>
-    </ul>
+    </ul> */}
 
   
 </div> 
-<div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+<div class=" p-6 bg-white">
     <h2 class="text-2xl font-bold text-gray-800 mb-4">Neighborhood Highlights</h2>
     <p class="text-gray-600">
         Welcome to the historic neighborhood of Dignowity Hill, located on the east side of downtown San Antonio!

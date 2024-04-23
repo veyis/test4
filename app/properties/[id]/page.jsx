@@ -18,6 +18,8 @@ import TeslaMap1 from "@/components/TeslaMap1";
 import ThingsToKnow from "@/components/ThingsToKnow";
 import TeslaAmenities from "@/components/TeslaAmenities";
 
+import AboutYourStay from "@/components/AboutYourStay";
+
 import {
 	FaUsers,
 	FaBed,
@@ -281,6 +283,8 @@ const PropertyPage = () => {
 								</div>
 
 								<TeslaAmenities />
+								<AboutYourStay />
+
 
 
 							 <TeslaMap1 />
