@@ -104,7 +104,7 @@ const AboutYourStay = () => {
 
 
           <div className="flex flex-1">
-      		<FaBaby className="text-xl mr-2" />
+      		<FaBaby className="text-xl mr-2"  />
 						Children:
 					</div>
 					<div className="flex flex-1">
