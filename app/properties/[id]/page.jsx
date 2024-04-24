@@ -77,7 +77,7 @@ const PropertyPage = () => {
 								{/* Large Image */}
 								<div className="w-1/2">
 									<Image
-										src="/images/properties/tesla0.jpg"
+										src="/images/properties/th1.jpg"
 										alt="Large Property Image"
 										width={800}
 										height={600}
