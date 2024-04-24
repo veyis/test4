@@ -3,6 +3,14 @@ import { MdWifi, MdKitchen, MdOutlineWorkspacePremium } from "react-icons/md";
 import { FaCar, FaChargingStation, FaTv, FaCamera } from "react-icons/fa";
 import { IoMdSnow } from "react-icons/io";
 
+function splitAndCapitalize(text) {
+    // Split the string at each point a new capital letter starts, and join with a space
+    const result = text.replace(/([A-Z])/g, ' $1').trim();
+
+    // Capitalize the first letter of the entire result and ensure the rest is lower case
+    return result.charAt(0).toUpperCase() + result.slice(1);
+}
+
 // Modal component for displaying detailed amenities
 const Modal = ({ children, onClose }) => {
 	return (
@@ -22,83 +30,83 @@ const Modal = ({ children, onClose }) => {
 
 const amenities = {
   ScenicViews: [
-      { icon: "🌄", label: "Garden view" }
+      { icon: "🌄", label: "Garden view", category: "Scenic Views" },
   ],
   Bathroom: [
-      { icon: "🛁", label: "Bathtub" },
-      { icon: "💇‍♀️", label: "Hair dryer" },
-      { icon: "🧼", label: "Cleaning products" },
-      { icon: "🧴", label: "Ginger Lily Farms shampoo" },
-      { icon: "🧴", label: "Ginger Lily Farms conditioner" },
-      { icon: "🧴", label: "Ginger Lily Farms body soap" },
-      { icon: "🚿", label: "Hot water" },
-      { icon: "🧴", label: "Shower gel" }
+      { icon: "🛁", label: "Bathtub", category: "Bathroom" },
+      { icon: "💇‍♀️", label: "Hair dryer",category: "Bathroom" },
+      { icon: "🧼", label: "Cleaning products",category: "Bathroom" },
+      { icon: "🧴", label: "Ginger Lily Farms shampoo",category: "Bathroom" },
+      { icon: "🧴", label: "Ginger Lily Farms conditioner",category: "Bathroom" },
+      { icon: "🧴", label: "Ginger Lily Farms body soap",category: "Bathroom" },
+      { icon: "🚿", label: "Hot water",category: "Bathroom" },
+      { icon: "🧴", label: "Shower gel",category: "Bathroom" }
   ],
   BedroomAndLaundry: [
-      { icon: "🛏️", label: "Essentials (Towels, bed sheets, soap, toilet paper)" },
-      { icon: "🧺", label: "Hangers" },
-      { icon: "🛏️", label: "Bed linens" },
-      { icon: "🛏️", label: "Clara Clark linens" },
-      { icon: "🛏️", label: "Extra pillows and blankets" },
-      { icon: "🪟", label: "Room-darkening shades" },
-      { icon: "👗", label: "Iron" },
-      { icon: "🚪", label: "Walk-in closet and closet" },
-      { icon: "🧼", label: "Free washer – In unit" },
-      { icon: "🧼", label: "Free dryer – In building" }
+      { icon: "🛏️", label: "Essentials (Towels, bed sheets, soap, toilet paper)",category: "Bedroom And Laundry" },
+      { icon: "🧺", label: "Hangers",category: "Bedroom And Laundry" },
+      { icon: "🛏️", label: "Bed linens",category: "Bedroom And Laundry" },
+      { icon: "🛏️", label: "Clara Clark linens",category: "Bedroom And Laundry" },
+      { icon: "🛏️", label: "Extra pillows and blankets",category: "Bedroom And Laundry" },
+      { icon: "🪟", label: "Room-darkening shades",category: "Bedroom And Laundry" },
+      { icon: "👗", label: "Iron",category: "Bedroom And Laundry" },
+      { icon: "🚪", label: "Walk-in closet and closet",category: "Bedroom And Laundry" },
+      { icon: "🧼", label: "Free washer – In unit",category: "Bedroom And Laundry" },
+      { icon: "🧼", label: "Free dryer – In building",category: "Bedroom And Laundry" }
   ],
   Entertainment: [
-      { icon: "📺", label: "65 inch HDTV with standard cable" }
+      { icon: "📺", label: "65 inch HDTV with standard cable",category: "Entertainment" }
   ],
   Family: [
-      { icon: "🎲", label: "Board games" }
+      { icon: "🎲", label: "Board games",category: "Family" }
   ],
   HeatingAndCooling: [
-      { icon: "❄️", label: "Central air conditioning" },
-      { icon: "🌀", label: "Ceiling fan" },
-      { icon: "🌬️", label: "Portable fans" },
-      { icon: "🔥", label: "Central heating" }
+      { icon: "❄️", label: "Central air conditioning",category: "Heating And Cooling" },
+      { icon: "🌀", label: "Ceiling fan",category: "Heating And Cooling" },
+      { icon: "🌬️", label: "Portable fans",category: "Heating And Cooling" },
+      { icon: "🔥", label: "Central heating",category: "Heating And Cooling" }
   ],
   HomeSafety: [
-      { icon: "🔊", label: "Noise decibel monitors on property" },
-      { icon: "🎥", label: "Exterior security cameras on property" },
-      { icon: "🚨", label: "Security system with sensors" },
-      { icon: "🔥", label: "Smoke alarm" },
-      { icon: "⚠️", label: "Carbon monoxide alarm" },
-      { icon: "🧯", label: "Fire extinguisher" }
+      { icon: "🔊", label: "Noise decibel monitors on property",category: "Home Safety" },
+      { icon: "🎥", label: "Exterior security cameras on property",category: "Home Safety" },
+      { icon: "🚨", label: "Security system with sensors",category: "Home Safety" },
+      { icon: "🔥", label: "Smoke alarm",category: "Home Safety" },
+      { icon: "⚠️", label: "Carbon monoxide alarm",category: "Home Safety" },
+      { icon: "🧯", label: "Fire extinguisher",category: "Home Safety" }
   ],
   InternetAndOffice: [
-      { icon: "🌐", label: "Fast wifi – 416 Mbps" },
-      { icon: "💼", label: "Dedicated workspace in a common space" }
+      { icon: "🌐", label: "Fast wifi – 416 Mbps",category: "Internet And Office" },
+      { icon: "💼", label: "Dedicated workspace in a common space",category: "Internet And Office" }
   ],
   KitchenAndDining: [
-      { icon: "🍳", label: "Kitchen" },
-      { icon: "🍽️", label: "Dishes and silverware" },
-      { icon: "🍴", label: "Cooking basics" },
-      { icon: "🍷", label: "Wine glasses" },
-      { icon: "☕", label: "Keurig coffee machine" },
-      { icon: "🥘", label: "Whirlpool appliances (stove, oven)" },
-      { icon: "🍴", label: "Barbecue utensils" },
-      { icon: "🥘", label: "Baking sheet" }
+      { icon: "🍳", label: "Kitchen",category: "Kitchen And Dining" },
+      { icon: "🍽️", label: "Dishes and silverware",category: "Kitchen And Dining" },
+      { icon: "🍴", label: "Cooking basics",category: "Kitchen And Dining" },
+      { icon: "🍷", label: "Wine glasses",category: "Kitchen And Dining" },
+      { icon: "☕", label: "Keurig coffee machine",category: "Kitchen And Dining" },
+      { icon: "🥘", label: "Whirlpool appliances (stove, oven)",category: "Kitchen And Dining" },
+      { icon: "🍴", label: "Barbecue utensils",category: "Kitchen And Dining" },
+      { icon: "🥘", label: "Baking sheet",category: "Kitchen And Dining" }
   ],
   LocationFeatures: [
-      { icon: "🚪", label: "Private entrance" }
+      { icon: "🚪", label: "Private entrance",category: "Location Features" }
   ],
   Outdoor: [
-      { icon: "🌳", label: "Private backyard – Fully fenced" },
-      { icon: "🪑", label: "Outdoor furniture" },
-      { icon: "🍖", label: "BBQ grill: gas" },
-      { icon: "🌳", label: "Private patio or balcony" },
-      { icon: "🌳", label: "Outdoor dining area" }
+      { icon: "🌳", label: "Private backyard – Fully fenced", category: "Outdoor" },
+      { icon: "🪑", label: "Outdoor furniture", category: "Outdoor" },
+      { icon: "🍖", label: "BBQ grill: gas", category: "Outdoor" },
+      { icon: "🌳", label: "Private patio or balcony", category: "Outdoor" },
+      { icon: "🌳", label: "Outdoor dining area", category: "Outdoor" }
   ],
   ParkingAndFacilities: [
-      { icon: "🚗", label: "Free carport on premises" },
-      { icon: "🚗", label: "Free street parking" },
-      { icon: "🔌", label: "EV charger - level 2, Tesla only" }
+      { icon: "🚗", label: "Free carport on premises", category: "Parking and Facilities" },
+      { icon: "🚗", label: "Free street parking", category: "Parking and Facilities" },
+      { icon: "🔌", label: "EV charger", category: "Parking and Facilities" }
   ],
   Services: [
-      { icon: "📅", label: "Long term stays allowed" },
-      { icon: "🔑", label: "Self check-in" },
-      { icon: "🧹", label: "Cleaning available during stay" }
+      { icon: "📅", label: "Long term stays allowed", category: "Services" },
+      { icon: "🔑", label: "Self check-in",category: "Services" },
+      { icon: "🧹", label: "Cleaning available during stay",category: "Services" }
   ]
 };
 
@@ -164,8 +172,8 @@ const TeslaAmenities = () => {
          
               <div>
                   {Object.keys(amenities).map((category) => (
-                      <div className="py-2" key={category}>
-                          <h3 className="text-lg font-medium">{category}</h3>
+                      <div className="py-4" key={category}>
+                          <h3 className="text-lg font-bold">{splitAndCapitalize(category)} </h3>
                           <ul className="mt-4 space-y-3">
                               {Array.isArray(amenities[category]) ? (
                                   amenities[category].map((item, index) => (
