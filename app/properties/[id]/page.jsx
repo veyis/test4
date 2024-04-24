@@ -145,7 +145,7 @@ const PropertyPage = () => {
 										height={50}
 										className="rounded-lg"
 									/>
-									<span className="text-lg text-gray-800 py-1 px-2">
+									<span className="text-md text-gray-800 py-1 px-2">
 										{" "}
 										One of the most loved homes on Airbnb <br />
 										based on ratings, reviews, and reliability.
@@ -160,7 +160,7 @@ const PropertyPage = () => {
 								</div>
 
 								<div className="max-w-md  p-4 flex items-start space-x-4">
-									<MdWifi className="w-8 h-8 text-blue-500" />{" "}
+									<MdWifi className="w-8 h-8 text-slate-800" />{" "}
 									{/* Wi-Fi icon component */}
 									<div className="flex flex-col">
 										<span className="font-semibold text-gray-900">
@@ -174,7 +174,7 @@ const PropertyPage = () => {
 								</div>
 
 								<div className="max-w-md  p-4 flex items-start space-x-4">
-									<MdKeyboard className="w-8 h-8 text-blue-500" />{" "}
+									<MdKeyboard className="w-8 h-8 text-slate-800" />{" "}
 									{/* Keyboard icon as a placeholder for a keypad */}
 									<div className="flex flex-col">
 										<span className="font-semibold text-gray-900">
