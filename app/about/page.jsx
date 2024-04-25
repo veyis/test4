@@ -24,7 +24,7 @@ const AboutUs = () => {
 							
 						
 							<p className="py-2">
-							On our first trip to San Antonio, we fell in love with this City’s charm. We were captivated by the enchanting beauty of the Riverwalk, the rich history of the Alamo, and the vibrant energy of Hemisphere Park's festivities.
+							On our first trip to San Antonio, we fell in love with this City’s charm. We were captivated by the enchanting beauty of the Riverwalk, the rich history of The Alamo, and the vibrant energy of Hemisphere Park's festivities.
 
 							</p>
 					

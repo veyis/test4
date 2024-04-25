@@ -25,7 +25,7 @@ const photos = () => {
         
         { id: 12, url: '/images/properties/th12.jpg', alt: 'Photo 12', description: 'Bathroom  '},  
     
-        { id: 6, url: '/images/properties/th6.jpg', alt: 'Photo 6', description: 'Master Bathroom  ' },
+        // { id: 6, url: '/images/properties/th6.jpg', alt: 'Photo 6', description: 'Master Bathroom  ' },
         { id: 7, url: '/images/properties/th7.jpg', alt: 'Photo 7', description: 'Master Bathroom  ' },
         { id: 15, url: '/images/properties/th15.jpg', alt: 'Photo 1', description: 'Laundry  ' },
      

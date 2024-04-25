@@ -141,7 +141,7 @@ const TeslaAmenities = () => {
 				</div>
 				<div className="flex items-center">
 					<FaChargingStation className="text-xl mr-2" />
-					EV charger - level 2, Tesla only
+					EV charger 
 				</div>
 				<div className="flex items-center">
 					<FaTv className="text-xl mr-2" />

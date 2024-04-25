@@ -48,7 +48,7 @@ const faqs = [
 
     {
       question: "What is your cancellation policy?",
-      answer: <p>You are eligible for a complete refund if you cancel your reservation at least 7 days before your check-in date.</p>
+      answer: <p>You are eligible for a complete refund if you cancel your reservation at least 14 days before your check-in date.</p>
     },
     {
       question: "Are parties allowed?",

@@ -15,7 +15,7 @@ import { MdWifi } from "react-icons/md"; // Corrected icon import
 import { MdKeyboard } from "react-icons/md"; // Importing a keyboard icon which can symbolize a keypad
 import Amenities from "@/components/Amenities";
 import TeslaMap1 from "@/components/TeslaMap1";
-import ThingsToKnow from "@/components/ThingsToKnow";
+
 import TeslaAmenities from "@/components/TeslaAmenities";
 
 import AboutYourStay from "@/components/AboutYourStay";
@@ -137,7 +137,7 @@ const PropertyPage = () => {
 									</div>
 								</div>
 
-								<div className="border-t border-gray-200 rounded-lg flex flex-1">
+								{/* <div className="border-t border-gray-200 rounded-lg flex flex-1">
 									<Image
 										src="/images/review1.png"
 										alt="Property Image"
@@ -157,7 +157,7 @@ const PropertyPage = () => {
 										height={50}
 										className="rounded-lg"
 									/>
-								</div>
+								</div> */}
 
 								<div className="max-w-md  p-4 flex items-start space-x-4">
 									<MdWifi className="w-8 h-8 text-slate-800" />{" "}
@@ -207,16 +207,16 @@ const PropertyPage = () => {
 
 										<div className="p-0">
 											<div>
-												<h4 className="text-md font-semibold py-0">
-													Long Term Stays :{" "}
-													<span className="font-light">Minimum 30 days</span>
+												<h4 className="text-md  py-0">
+													Long Term Stays : {" "}
+													<span>Minimum 30 days</span>
 												</h4>
 											</div>
 
 											<div>
-												<h2 class="text-md font-semibold py-0">
-													Short Term Stays :{" "}
-													<span className="font-light">Minimum 2 days</span>{" "}
+												<h2 class="text-md  py-0">
+													Short Term Stays : {" "}
+													<span>Minimum 2 days</span>{" "}
 												</h2>
 											</div>
 										</div>
@@ -288,7 +288,6 @@ const PropertyPage = () => {
 
 
 							 <TeslaMap1 />
-									<ThingsToKnow /> 
 							</div>
 						</div>
 					</section>

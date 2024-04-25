@@ -52,21 +52,14 @@ const TeslaMap1 = () => {
     <p class="text-gray-600">
         Welcome to the historic neighborhood of Dignowity Hill, located on the east side of downtown San Antonio!
         This community boasts a mix of architectural styles including Folk Victorian, early 20th century craftsmen, and some new builds. This up-and-coming area has experienced a surge of renovation in recent years and has a lot of potential for future growth & development.
-    </p>
-    <p class="text-gray-600 mt-4">
+
         Despite its rough and unpolished appearance, Dignowity Hill is quickly becoming a sought-after destination for travelers, home buyers, and foodies alike, thanks to its unique residential architecture, convenient location near downtown, major attractions, and a plethora of delicious restaurants a short drive away.
     </p>
     <p class="text-gray-600 mt-4">
         Our top priority is ensuring our guests have a comfortable and enjoyable stay, so please don't hesitate to reach out to us with any concerns or questions.
     </p>
 
-    {/* <!-- Transportation --> */}
-    <h3 class="font-semibold text-gray-700 mt-6 mb-2">Getting Around</h3>
-    <p class="text-gray-600">
-        The private, gated driveway is suitable for up to (3) cars parked in a single line.
-        There is plenty of curb-side parking available in front of the property.
-        Uber/Lyft are plentiful so you can easily get a ride anywhere.
-    </p>
+ 
 {/* 
     <!-- Nearby Attractions --> */}
     <h3 class="font-semibold text-gray-700 mt-6 mb-2">Nearby Attractions</h3>

@@ -24,12 +24,12 @@ const AboutYourStay = () => {
 						Check-in:
 					</div>
 					<div className="flex flex-1">
-						<span>Before 11:00 AM</span>
+						<span>After  04:00 PM</span>
 					</div>
 
 					<div className="flex flex-1">
 						<BiTimeFive className="text-xl mr-2" />
-						Check-Out:
+						Check-out:
 					</div>
 					<div className="flex flex-1">
 						<span>By 10:00 AM</span>
@@ -43,7 +43,7 @@ const AboutYourStay = () => {
 						<span>
 							min. 30 days - long term
 							<br />
-							min. 2 days – short term
+							min. 2 days - short term
 						</span>
 					</div>
 
@@ -52,7 +52,7 @@ const AboutYourStay = () => {
 						Cancellation:
 					</div>
 					<div className="flex flex-1">
-						<span>Full refund available up to 5 days before your arrival</span>
+						<span>Full refund available up to 14 days before your arrival</span>
 					</div>
 
 					<div className="flex flex-1">
@@ -68,7 +68,7 @@ const AboutYourStay = () => {
 						Quiet Hours:
 					</div>
 					<div className="flex flex-1">
-          <span>11:00 PM - 6:00 AM</span>
+          <span>10:00 PM - 7:00 AM</span>
 					</div>
 
           <div className="flex flex-1">
@@ -88,8 +88,8 @@ const AboutYourStay = () => {
           <span>Candles, incense and similar flame & smoke emitting devices are not
 						allowed inside the house due to the potential fire hazard.
 					
-						We have security cameras operating outside on property. Carbon
-						monoxide, smoke detectors, and fire extinguishers are tested and
+						We have security cameras operating outside on property. <br />
+						 Carbon monoxide, smoke detectors, and fire extinguishers are tested and
 						available for emergencies.</span>
 					</div>
 
