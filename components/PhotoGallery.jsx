@@ -1,21 +1,18 @@
 'use client'
-import Image from 'next/image';
 import React, { useState } from 'react';
 
 function Modal({ photo, onClose, onNext, onPrev }) {
   if (!photo) return null;
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
-      <div className="bg-white p-4 rounded-lg max-w-3xl max-h-full overflow-auto relative">
+      {/* Adjusted width for modal container */}
+      <div className="bg-white p-4 rounded-lg max-w-screen-xl h-96 overflow-hidden relative">
         <button onClick={onPrev} className="absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl text-white z-60">&#10094;</button>
-        <Image
+        {/* Adjusted image CSS to fit the container */}
+        <img
           src={photo.url}
           alt={photo.alt}
-          layout="responsive"
-          width={900}
-          height={600}
-          objectFit="contain"
-          className="rounded-lg"
+          className="object-fit-contain w-full h-full"
         />
         <p className="text-center p-4">{photo.description}</p>
         <button onClick={onClose} className="absolute top-0 right-0 m-2 text-xl bg-white p-1 rounded-full z-60">&times;</button>
@@ -24,7 +21,6 @@ function Modal({ photo, onClose, onNext, onPrev }) {
     </div>
   );
 }
-
 
 function PhotoGallery({ photos }) {
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -54,14 +50,11 @@ function PhotoGallery({ photos }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
         {photos.map((photo, index) => (
           <div key={photo.id} className="relative cursor-pointer" onClick={() => handlePhotoClick(index)}>
-            <Image
+            {/* Adjusted image CSS to fit the container */}
+            <img
               src={photo.url}
               alt={photo.alt}
-              layout="responsive"
-              width={500}
-              height={300}
-              objectFit="cover"
-              className="rounded-lg shadow-lg"
+              className="object-fit-cover w-full h-72 sm:h-80 md:h-96 rounded-lg shadow-lg"
             />
             <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full rounded-b-lg">
               {photo.description}
