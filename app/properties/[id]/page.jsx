@@ -68,7 +68,7 @@ const PropertyPage = () => {
 					{/* <PropertyHeaderImage image={property.images[0]} /> */}
 					<section>
 						<div className="sm:px-6 lg:px-8 py-4">
-							<h1 className="text-2xl font-bold text-gray-700 p1">
+							<h1 className="text-xl font-bold text-gray-700 p-1">
 									<ShareButtons property={property} />
 								★ Tesla House w/ Hot-Tub 3br/3bath 5min to Downtown
 							
