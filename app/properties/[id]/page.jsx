@@ -25,6 +25,7 @@ import {
 	FaBed,
 	FaBath,
 	FaRulerCombined,
+	FaShare,
 	FaMoneyBill,
 	FaMapMarker,
 } from "react-icons/fa";
@@ -66,14 +67,17 @@ const PropertyPage = () => {
 				<>
 					{/* <PropertyHeaderImage image={property.images[0]} /> */}
 					<section>
-						<div className="sm:px-6 lg:px-8">
-							<h1 className="text-2xl font-bold text-gray-700">
-								<br />
-								<p className="px-2">★ Tesla House w/ Hot-Tub 3br/3bath 5min to Downtown</p>
-								<br />
+						<div className="sm:px-6 lg:px-8 py-4">
+							<h1 className="text-2xl font-bold text-gray-700 p1">
+									<ShareButtons property={property} />
+								★ Tesla House w/ Hot-Tub 3br/3bath 5min to Downtown
+							
+						
+					
 							</h1>
+
 							{/* Image Gallery */}
-							<div className="flex flex-wrap   bg-white shadow overflow-hidden sm:rounded-lg">
+							<div className="flex flex-wrap   bg-white shadow overflow-hidden sm:rounded-lg py-2">
 								{/* Large Image */}
 								<div className="w-1/2">
 									<Image
@@ -102,16 +106,42 @@ const PropertyPage = () => {
 									))}
 									<Link
 										href="/properties/photos"
-										className="absolute bottom-0 right-0 p-1 m-2 bg-gray-100 text-gray-800 rounded-lg"
+										className="absolute bottom-0 right-0 p-1 m-2 bg-gray-100  hover:bg-gray-400 text-gray-800 font-semibold px-4 py-2 rounded-md flex items-center"
 									>
 										Show all photos
 									</Link>
+									{/* <Link
+										href="/share" // Update this with the actual path you want to link to
+										className="absolute bottom-0 right-0 p-1 m-2 bg-gray-100  hover:bg-gray-400 text-gray-800 font-semibold px-4 py-2 rounded-md flex items-center"
+									>
+										<svg
+											className="w-5 h-5 mr-1"
+											viewBox="0 0 32 32"
+											xmlns="http://www.w3.org/2000/svg"
+											aria-labelledby="shareIconTitle"
+											role="img"
+										>
+											<title id="shareIconTitle">Share Icon</title>
+											<path
+												d="m 27 18 v 9 c 0 1.1046 -0.8954 2 -2 2 h -18 c -1.10457 0 -2 -0.8954 -2 -2 v -9 m 11 -15 v 21 m -10 -11 l 9.2929 -9.29289 c 0.3905 -0.39053 1.0237 -0.39053 1.4142 0 l 9.2929 9.29289"
+												fill="none"
+												stroke="currentColor"
+												strokeWidth="2"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+											/>
+										</svg>
+										Share
+									</Link> */}
 								</div>
 							</div>
 
+							
+
 							{/* Property Details */}
 							<div className="mt-6 bg-white shadow overflow-hidden sm:rounded-lg ">
-								<div className="px-4 py-5 sm:px-6 ">
+								
+								<div className="px-4 sm:px-6 ">
 									<h2 className="text-2xl leading-6 font-medium text-gray-900">
 										Entire home in San Antonio, Texas
 									</h2>
@@ -208,15 +238,13 @@ const PropertyPage = () => {
 										<div className="p-0">
 											<div>
 												<h4 className="text-md  py-0">
-													Long Term Stays : {" "}
-													<span>Minimum 30 days</span>
+													Long Term Stays : <span>Minimum 30 days</span>
 												</h4>
 											</div>
 
 											<div>
 												<h2 class="text-md  py-0">
-													Short Term Stays : {" "}
-													<span>Minimum 2 days</span>{" "}
+													Short Term Stays : <span>Minimum 2 days</span>{" "}
 												</h2>
 											</div>
 										</div>
@@ -285,9 +313,7 @@ const PropertyPage = () => {
 								<TeslaAmenities />
 								<AboutYourStay />
 
-
-
-							 <TeslaMap1 />
+								<TeslaMap1 />
 							</div>
 						</div>
 					</section>

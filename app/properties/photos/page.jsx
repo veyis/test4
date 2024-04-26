@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import PhotoGallery from '@/components/PhotoGallery';
 
 const photos = () => {
@@ -25,8 +26,6 @@ const photos = () => {
         
         { id: 19, url: '/images/properties/th19.jpg', alt: 'Photo 17', description: 'EV Car Charger  '},
      
-        
-        
        
         // { id: 6, url: '/images/properties/th6.jpg', alt: 'Photo 6', description: 'Master Bathroom  ' },
         { id: 15, url: '/images/properties/th15.jpg', alt: 'Photo 1', description: 'Laundry  ' },
@@ -35,11 +34,22 @@ const photos = () => {
       ];
 
   return (
+    <>
    
-<div className="container mx-auto px-4">
-      <h1 className="text-center text-4xl font-bold my-8">All Photos</h1>
-      <PhotoGallery photos={photos} />
+    <div className="container mx-auto px-1">
+    <h1 className="text-center text-2xl font-bold my-8">All Photos</h1>
+    <div className="m-2">
+        <Link href="/properties/1" className="text-lg text-blue-600 hover:underline flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="mr-2">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Back
+        </Link>
     </div>
+    <PhotoGallery photos={photos} />
+</div>
+</>
+
   )
 }
 
