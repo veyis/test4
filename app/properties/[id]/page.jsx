@@ -68,8 +68,8 @@ const PropertyPage = () => {
 					{/* <PropertyHeaderImage image={property.images[0]} /> */}
 					<section>
 						<div className="sm:px-6 lg:px-8 py-4">
-							<h1 className="text-xl font-bold text-gray-700 p-1">
-									<ShareButtons property={property} />
+							<h1 className="text-2xl font-bold text-gray-700 p-1">
+									{/* <ShareButtons property={property} /> */}
 								★ Tesla House w/ Hot-Tub 3br/3bath 5min to Downtown
 							
 						
@@ -80,6 +80,7 @@ const PropertyPage = () => {
 							<div className="flex flex-wrap   bg-white shadow overflow-hidden sm:rounded-lg py-2">
 								{/* Large Image */}
 								<div className="w-1/2">
+								<Link href="/properties/photos">
 									<Image
 										src="/images/properties/th1.jpg"
 										alt="Large Property Image"
@@ -90,11 +91,13 @@ const PropertyPage = () => {
 										className="gap-1 px-1"
 										radius="rounded-lg"
 									/>
+									</Link>
 								</div>
 								{/* Small Images */}
 								<div className="w-1/2 grid grid-rows-2 grid-cols-2 gap-1 p-0 relative">
 									{[1, 2, 5, 13].map((i) => (
 										<div key={i} className="relative w-full h-full">
+									<Link href="/properties/photos">
 											<Image
 												src={`/images/properties/tesla${i}.jpg`}
 												alt={`Property Image ${i}`}
@@ -102,37 +105,40 @@ const PropertyPage = () => {
 												objectFit="cover"
 												className="px-0"
 											/>
+											
+									</Link>
 										</div>
 									))}
 									<Link
 										href="/properties/photos"
 										className="absolute bottom-0 right-0 p-1 m-2 bg-gray-100  hover:bg-gray-400 text-gray-800 font-semibold px-4 py-2 rounded-md flex items-center"
 									>
-										Show all photos
+										Show all Photos
 									</Link>
-									{/* <Link
-										href="/share" // Update this with the actual path you want to link to
-										className="absolute bottom-0 right-0 p-1 m-2 bg-gray-100  hover:bg-gray-400 text-gray-800 font-semibold px-4 py-2 rounded-md flex items-center"
-									>
-										<svg
-											className="w-5 h-5 mr-1"
-											viewBox="0 0 32 32"
-											xmlns="http://www.w3.org/2000/svg"
-											aria-labelledby="shareIconTitle"
-											role="img"
-										>
-											<title id="shareIconTitle">Share Icon</title>
-											<path
-												d="m 27 18 v 9 c 0 1.1046 -0.8954 2 -2 2 h -18 c -1.10457 0 -2 -0.8954 -2 -2 v -9 m 11 -15 v 21 m -10 -11 l 9.2929 -9.29289 c 0.3905 -0.39053 1.0237 -0.39053 1.4142 0 l 9.2929 9.29289"
-												fill="none"
-												stroke="currentColor"
-												strokeWidth="2"
-												strokeLinecap="round"
-												strokeLinejoin="round"
-											/>
-										</svg>
-										Share
-									</Link> */}
+									{/* <button
+    className="absolute bottom-0 right-0 p-1 m-2 bg-gray-100 hover:bg-gray-400 text-gray-800 font-semibold px-4 py-2 rounded-md flex items-center"
+    onClick={share}
+>
+    <svg
+        className="w-5 h-5 mr-1"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby="shareIconTitle"
+        role="img"
+    >
+        <title id="shareIconTitle">Share Icon</title>
+        <path
+            d="m 27 18 v 9 c 0 1.1046 -0.8954 2 -2 2 h -18 c -1.10457 0 -2 -0.8954 -2 -2 v -9 m 11 -15 v 21 m -10 -11 l 9.2929 -9.29289 c 0.3905 -0.39053 1.0237 -0.39053 1.4142 0 l 9.2929 9.29289"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+    Share
+</button> */}
+
 								</div>
 							</div>
 

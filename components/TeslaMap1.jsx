@@ -1,4 +1,3 @@
-import React from 'react'
 
 const TeslaMap1 = () => {
   return (
@@ -55,10 +54,6 @@ const TeslaMap1 = () => {
 
         Despite its rough and unpolished appearance, Dignowity Hill is quickly becoming a sought-after destination for travelers, home buyers, and foodies alike, thanks to its unique residential architecture, convenient location near downtown, major attractions, and a plethora of delicious restaurants a short drive away.
     </p>
-    <p class="text-gray-600 mt-4">
-        Our top priority is ensuring our guests have a comfortable and enjoyable stay, so please don't hesitate to reach out to us with any concerns or questions.
-    </p>
-
  
 {/* 
     <!-- Nearby Attractions --> */}

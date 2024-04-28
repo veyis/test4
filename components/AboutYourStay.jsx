@@ -87,7 +87,7 @@ const AboutYourStay = () => {
 					<div className="flex flex-1">
           <span>Candles, incense and similar flame & smoke emitting devices are not
 						allowed inside the house due to the potential fire hazard.
-					
+					<br />
 						We have security cameras operating outside on property. <br />
 						 Carbon monoxide, smoke detectors, and fire extinguishers are tested and
 						available for emergencies.</span>
